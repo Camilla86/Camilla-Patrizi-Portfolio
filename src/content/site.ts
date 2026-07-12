@@ -2,7 +2,7 @@ import type { NavItem } from '@/types';
 
 // Dati globali del sito: sostituisci con le informazioni reali del content creator.
 export const siteConfig = {
-  name: 'Elena Marchetti',
+  name: 'Camilla Patrizi',
   tagline: 'Content Creator & Visual Storyteller',
   description:
     'Portfolio di Elena Marchetti: fotografia, video e immagini create per brand e progetti editoriali. Racconti visivi cinematografici con un\'estetica pulita e riconoscibile.',
