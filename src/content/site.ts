@@ -3,12 +3,12 @@ import type { NavItem } from '@/types';
 // Dati globali del sito: sostituisci con le informazioni reali del content creator.
 export const siteConfig = {
   name: 'Camilla Patrizi',
-  tagline: 'Content Creator & Visual Storyteller',
+  tagline: 'Content Creator & AI designer',
   description:
-    'Portfolio di Elena Marchetti: fotografia, video e immagini create per brand e progetti editoriali. Racconti visivi cinematografici con un\'estetica pulita e riconoscibile.',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.elenamarchetti.it',
+    'Portfolio di Camilla Patrizi: fotografia, video e immagini create per brand e progetti editoriali. Racconti visivi con video,foto e immagini con un\'estetica pulita e riconoscibile.',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.camillapatrizi-portfolio',
   locale: 'it_IT',
-  email: 'ciao@elenamarchetti.it',
+  email: 'c.patrizi@hotmail.com',
   social: {
     instagram: 'https://instagram.com/elenamarchetti',
     youtube: 'https://youtube.com/@elenamarchetti',
