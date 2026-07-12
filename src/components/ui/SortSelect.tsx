@@ -1,0 +1,37 @@
+'use client';
+
+import type { SortOption } from '@/types';
+
+const SORT_LABELS: Record<SortOption, string> = {
+  recenti: 'Più recenti',
+  'meno-recenti': 'Meno recenti',
+  alfabetico: 'Ordine alfabetico',
+};
+
+interface SortSelectProps {
+  value: SortOption;
+  onChange: (value: SortOption) => void;
+}
+
+/** Selettore di ordinamento per il catalogo portfolio. */
+export function SortSelect({ value, onChange }: SortSelectProps) {
+  return (
+    <div>
+      <label htmlFor="portfolio-sort" className="sr-only">
+        Ordina i risultati
+      </label>
+      <select
+        id="portfolio-sort"
+        value={value}
+        onChange={(e) => onChange(e.target.value as SortOption)}
+        className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-100 transition-colors focus:border-electric-400"
+      >
+        {(Object.keys(SORT_LABELS) as SortOption[]).map((option) => (
+          <option key={option} value={option} className="bg-navy-900 text-slate-100">
+            {SORT_LABELS[option]}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
