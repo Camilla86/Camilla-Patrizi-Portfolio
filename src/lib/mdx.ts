@@ -1,7 +1,22 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import type { BlogPost, BlogPostMeta } from '@/types';
+
+// NOTA: il Blog non fa parte del perimetro attuale del sito (le rotte /blog fanno
+// redirect verso /portfolio). Questo modulo non è più importato da nessuna pagina;
+// resta nel repository solo come riferimento, con tipi locali per restare compilabile.
+export interface BlogPostMeta {
+  slug: string;
+  title: string;
+  excerpt: string;
+  coverImage: string;
+  date: string;
+  tags: string[];
+}
+
+export interface BlogPost extends BlogPostMeta {
+  content: string;
+}
 
 const BLOG_DIR = path.join(process.cwd(), 'src/content/blog');
 
