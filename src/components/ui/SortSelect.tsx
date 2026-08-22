@@ -24,10 +24,10 @@ export function SortSelect({ value, onChange }: SortSelectProps) {
         id="portfolio-sort"
         value={value}
         onChange={(e) => onChange(e.target.value as SortOption)}
-        className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-100 transition-colors focus:border-electric-400"
+        className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-teal-500 focus:bg-white"
       >
         {(Object.keys(SORT_LABELS) as SortOption[]).map((option) => (
-          <option key={option} value={option} className="bg-navy-900 text-slate-100">
+          <option key={option} value={option}>
             {SORT_LABELS[option]}
           </option>
         ))}
