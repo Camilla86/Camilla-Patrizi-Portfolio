@@ -1,4 +1,9 @@
-import type { FaqItem } from '@/types';
+// NOTA: la pagina /faq fa redirect verso /servizi (le FAQ non fanno parte del
+// perimetro attuale del sito). Questo contenuto resta solo come riferimento.
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
 
 export const faqItems: FaqItem[] = [
   {
