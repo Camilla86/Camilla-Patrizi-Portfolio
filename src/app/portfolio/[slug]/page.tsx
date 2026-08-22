@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { Play, MapPin, CalendarDays } from 'lucide-react';
+import { Play, Building2, CalendarDays, Clock, Wrench } from 'lucide-react';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -38,7 +38,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Portfolio', href: '/portfolio' },
-    ...(category ? [{ label: category.name, href: `/categorie/${category.slug}` }] : []),
+    ...(category ? [{ label: category.shortName, href: `/portfolio?categoria=${category.slug}` }] : []),
     { label: item.title },
   ];
 
@@ -51,7 +51,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
 
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-neutral-200">
               <Image
                 src={item.coverImage}
                 alt={item.title}
@@ -62,7 +62,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
               />
               {item.mediaType === 'video' && (
                 <span className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/15 backdrop-blur">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur">
                     <Play className="h-6 w-6 text-white" aria-hidden="true" />
                   </span>
                 </span>
@@ -70,7 +70,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
             </div>
 
             {item.mediaType === 'video' && (
-              <p className="mt-3 text-xs text-slate-500">
+              <p className="mt-3 text-xs text-neutral-400">
                 Anteprima placeholder: sostituisci con il file video reale in <code>/public/videos</code>.
               </p>
             )}
@@ -80,7 +80,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
                 {item.gallery.slice(1).map((src) => (
                   <div
                     key={src}
-                    className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10"
+                    className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200"
                   >
                     <Image
                       src={src}
@@ -93,26 +93,62 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
                 ))}
               </div>
             )}
+
+            {/* Case study: sfida, approccio e risultati del progetto */}
+            <div className="mt-10 space-y-8">
+              <div>
+                <h2 className="text-xl font-semibold tracking-tight text-neutral-950">La sfida</h2>
+                <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.challenge}</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold tracking-tight text-neutral-950">L&apos;approccio</h2>
+                <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.approach}</p>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold tracking-tight text-neutral-950">I risultati</h2>
+                <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                  {item.results.map((result) => (
+                    <div key={result.label} className="glass-card p-5">
+                      <p className="text-2xl font-semibold tracking-tight text-teal-600">{result.value}</p>
+                      <p className="mt-1 text-sm text-neutral-500">{result.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           <div>
             <Badge>{mediaTypeLabel(item.mediaType)}</Badge>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{item.title}</h1>
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
+              {item.title}
+            </h1>
+            <p className="mt-4 text-base leading-relaxed text-neutral-600">{item.excerpt}</p>
 
-            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-400">
-              <span className="inline-flex items-center gap-1.5">
-                <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                {formatDate(item.date)}
-              </span>
-              {item.location && (
-                <span className="inline-flex items-center gap-1.5">
-                  <MapPin className="h-4 w-4" aria-hidden="true" />
-                  {item.location}
-                </span>
-              )}
-            </div>
-
-            <p className="mt-6 text-base leading-relaxed text-slate-300">{item.description}</p>
+            <dl className="mt-6 space-y-3 text-sm text-neutral-600">
+              <div className="flex items-center gap-2.5">
+                <Building2 className="h-4 w-4 text-teal-600" aria-hidden="true" />
+                <dt className="sr-only">Cliente</dt>
+                <dd>
+                  {item.client} — {item.sector}
+                </dd>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <CalendarDays className="h-4 w-4 text-teal-600" aria-hidden="true" />
+                <dt className="sr-only">Data</dt>
+                <dd>{formatDate(item.date)}</dd>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Clock className="h-4 w-4 text-teal-600" aria-hidden="true" />
+                <dt className="sr-only">Durata</dt>
+                <dd>{item.duration}</dd>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <Wrench className="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true" />
+                <dt className="sr-only">Strumenti</dt>
+                <dd>{item.tools.join(', ')}</dd>
+              </div>
+            </dl>
 
             <div className="mt-6 flex flex-wrap gap-2">
               {item.tags.map((tag) => (
