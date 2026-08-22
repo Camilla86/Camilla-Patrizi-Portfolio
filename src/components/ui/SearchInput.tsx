@@ -13,7 +13,7 @@ export function SearchInput({ value, onChange, placeholder = 'Cerca nel portfoli
   return (
     <div className="relative w-full">
       <Search
-        className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+        className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400"
         aria-hidden="true"
       />
       <label htmlFor="portfolio-search" className="sr-only">
@@ -25,7 +25,7 @@ export function SearchInput({ value, onChange, placeholder = 'Cerca nel portfoli
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-full border border-white/10 bg-white/[0.04] py-3 pl-11 pr-4 text-sm text-slate-100 placeholder:text-slate-500 transition-colors focus:border-electric-400"
+        className="w-full rounded-full border border-neutral-200 bg-neutral-50 py-3 pl-11 pr-4 text-sm text-neutral-900 placeholder:text-neutral-400 transition-colors focus:border-teal-500 focus:bg-white"
       />
     </div>
   );
