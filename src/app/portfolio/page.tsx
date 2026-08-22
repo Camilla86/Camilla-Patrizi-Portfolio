@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Portfolio',
   description:
-    'Catalogo completo dei lavori: foto, video e immagini create. Cerca, filtra per categoria o tipo di media e ordina i progetti.',
+    'Case study di progetti digitali: video social, landing page, analisi competitor e società, workflow AI e mini app. Cerca, filtra e sfoglia i progetti.',
   path: '/portfolio',
 });
 
@@ -18,14 +18,14 @@ export default function PortfolioPage() {
     <div className="section-container py-16">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Portfolio' }]} />
 
-      <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Portfolio</h1>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
-        Una selezione di progetti fotografici, video e immagini create. Usa la ricerca e i filtri per trovare il
-        lavoro che ti interessa.
+      <h1 className="text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">Portfolio</h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600">
+        Una selezione di case study: video social, landing page, analisi competitor e società, workflow AI e mini
+        app. Usa la ricerca e i filtri per trovare il progetto che ti interessa.
       </p>
 
       <div className="mt-10">
-        <Suspense fallback={<p className="text-slate-500">Caricamento portfolio…</p>}>
+        <Suspense fallback={<p className="text-neutral-500">Caricamento portfolio…</p>}>
           <PortfolioGrid items={portfolioItems} categories={categories} />
         </Suspense>
       </div>
