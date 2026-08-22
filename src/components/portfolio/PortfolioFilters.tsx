@@ -3,7 +3,7 @@
 import type { Category, MediaType } from '@/types';
 import { mediaTypeLabel } from '@/lib/utils';
 
-const MEDIA_TYPES: MediaType[] = ['foto', 'video', 'immagine-creata'];
+const MEDIA_TYPES: MediaType[] = ['video', 'landing', 'analisi', 'workflow', 'app'];
 
 interface PortfolioFiltersProps {
   categories: Category[];
@@ -13,7 +13,7 @@ interface PortfolioFiltersProps {
   onMediaTypeChange: (value: string) => void;
 }
 
-/** Filtri per categoria e tipo di media del catalogo portfolio. */
+/** Filtri per categoria e tipo di progetto del catalogo portfolio. */
 export function PortfolioFilters({
   categories,
   categoryValue,
@@ -31,14 +31,12 @@ export function PortfolioFilters({
           id="filter-categoria"
           value={categoryValue}
           onChange={(e) => onCategoryChange(e.target.value)}
-          className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-100 transition-colors focus:border-electric-400"
+          className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-teal-500 focus:bg-white"
         >
-          <option value="tutte" className="bg-navy-900">
-            Tutte le categorie
-          </option>
+          <option value="tutte">Tutte le categorie</option>
           {categories.map((category) => (
-            <option key={category.slug} value={category.slug} className="bg-navy-900">
-              {category.name}
+            <option key={category.slug} value={category.slug}>
+              {category.shortName}
             </option>
           ))}
         </select>
@@ -46,19 +44,17 @@ export function PortfolioFilters({
 
       <div>
         <label htmlFor="filter-tipo" className="sr-only">
-          Filtra per tipo di media
+          Filtra per tipo di progetto
         </label>
         <select
           id="filter-tipo"
           value={mediaTypeValue}
           onChange={(e) => onMediaTypeChange(e.target.value)}
-          className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-100 transition-colors focus:border-electric-400"
+          className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-teal-500 focus:bg-white"
         >
-          <option value="tutti" className="bg-navy-900">
-            Tutti i tipi
-          </option>
+          <option value="tutti">Tutti i tipi</option>
           {MEDIA_TYPES.map((type) => (
-            <option key={type} value={type} className="bg-navy-900">
+            <option key={type} value={type}>
               {mediaTypeLabel(type)}
             </option>
           ))}

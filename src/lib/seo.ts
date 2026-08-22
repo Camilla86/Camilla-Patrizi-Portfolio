@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/content/site';
-import type { BlogPostMeta, FaqItem, PortfolioItem } from '@/types';
+import type { PortfolioItem } from '@/types';
 import type { BreadcrumbEntry } from '@/components/ui/Breadcrumb';
 
 /** Costruisce un oggetto Metadata Next.js coerente per una pagina interna. */
@@ -67,61 +67,45 @@ export function breadcrumbJsonLd(items: BreadcrumbEntry[]) {
   };
 }
 
+/** Schema.org CreativeWork per una scheda di case study del portfolio. */
 export function portfolioItemJsonLd(item: PortfolioItem) {
   const commonFields = {
     '@context': 'https://schema.org',
+    '@type': item.mediaType === 'video' ? 'VideoObject' : 'CreativeWork',
     name: item.title,
     description: item.excerpt,
-    contentUrl: `${siteConfig.url}${item.coverImage}`,
+    image: `${siteConfig.url}${item.coverImage}`,
+    datePublished: item.date,
     creator: {
       '@type': 'Person',
       name: siteConfig.name,
     },
-    datePublished: item.date,
+    about: item.sector,
   };
 
   if (item.mediaType === 'video') {
     return {
       ...commonFields,
-      '@type': 'VideoObject',
       thumbnailUrl: `${siteConfig.url}${item.coverImage}`,
       uploadDate: item.date,
       ...(item.videoUrl ? { contentUrl: `${siteConfig.url}${item.videoUrl}` } : {}),
     };
   }
 
-  return {
-    ...commonFields,
-    '@type': 'ImageObject',
-  };
+  return commonFields;
 }
 
-export function blogPostingJsonLd(post: BlogPostMeta) {
+/** Schema.org Service, per la pagina Competenze/Servizi. */
+export function serviceJsonLd(options: { name: string; description: string }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.excerpt,
-    image: `${siteConfig.url}${post.coverImage}`,
-    datePublished: post.date,
-    author: {
+    '@type': 'Service',
+    serviceType: options.name,
+    description: options.description,
+    provider: {
       '@type': 'Person',
       name: siteConfig.name,
+      url: siteConfig.url,
     },
-  };
-}
-
-export function faqPageJsonLd(items: FaqItem[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
   };
 }

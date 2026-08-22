@@ -16,9 +16,11 @@ export function formatDate(iso: string) {
 }
 
 const MEDIA_TYPE_LABELS: Record<string, string> = {
-  foto: 'Foto',
-  video: 'Video',
-  'immagine-creata': 'Immagine creata',
+  video: 'Video social',
+  landing: 'Landing page',
+  analisi: 'Analisi',
+  workflow: 'Workflow AI',
+  app: 'Mini app',
 };
 
 /** Etichetta leggibile per un tipo di media del portfolio. */

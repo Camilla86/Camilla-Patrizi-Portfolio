@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/Badge';
-import type { BlogPostMeta } from '@/types';
+import type { BlogPostMeta } from '@/lib/mdx';
 import { formatDate } from '@/lib/utils';
+
+// NOTA: componente non più utilizzato (la rotta /blog fa redirect verso /portfolio).
+// Resta nel repository solo come riferimento.
 
 interface BlogCardProps {
   post: BlogPostMeta;

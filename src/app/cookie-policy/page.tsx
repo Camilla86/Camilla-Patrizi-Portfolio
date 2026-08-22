@@ -14,7 +14,7 @@ export default function CookiePolicyPage() {
     <div className="section-container py-16">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Cookie Policy' }]} />
 
-      <div className="prose prose-invert max-w-3xl prose-headings:tracking-tight prose-a:text-electric-300">
+      <div className="prose max-w-3xl prose-headings:tracking-tight prose-headings:text-neutral-950 prose-p:text-neutral-700 prose-a:text-teal-600">
         <h1>Cookie Policy</h1>
         <p>
           Questa pagina descrive le tipologie di cookie utilizzati dal sito di {siteConfig.name} e le modalità

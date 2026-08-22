@@ -19,7 +19,7 @@ export default function HomePage() {
       <AboutTeaser />
       <CTASection
         title="Hai un progetto in mente?"
-        description="Raccontami la tua idea: che sia una campagna, un video o un progetto editoriale, troviamo insieme la strada visiva giusta."
+        description="Raccontami il tuo obiettivo: che sia un video social, una landing page o un workflow AI, troviamo insieme la strada giusta."
       />
     </>
   );

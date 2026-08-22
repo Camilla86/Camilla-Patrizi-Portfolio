@@ -4,10 +4,11 @@ import { cn } from '@/lib/utils';
 
 const VARIANT_CLASSES = {
   primary:
-    'bg-electric-500 text-white hover:bg-electric-400 shadow-[0_0_0_1px_rgba(47,92,255,0.4)] hover:shadow-[0_0_24px_rgba(47,92,255,0.45)]',
+    'bg-teal-600 text-white hover:bg-teal-500 shadow-[0_0_0_1px_rgba(13,148,136,0.3)] hover:shadow-[0_0_20px_rgba(20,184,166,0.35)]',
   secondary:
-    'bg-transparent text-slate-100 border border-white/20 hover:border-electric-400 hover:text-white',
-  ghost: 'bg-transparent text-slate-300 hover:text-white',
+    'bg-transparent text-neutral-900 border border-neutral-300 hover:border-teal-500 hover:text-teal-700',
+  ghost: 'bg-transparent text-neutral-600 hover:text-neutral-900',
+  dark: 'bg-neutral-900 text-white hover:bg-neutral-800',
 } as const;
 
 const SIZE_CLASSES = {

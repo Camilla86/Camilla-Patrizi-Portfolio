@@ -34,7 +34,7 @@ export function BentoItem({ size = 'sm', children, className }: BentoItemProps) 
   return (
     <div
       className={cn(
-        'group relative min-h-[220px] overflow-hidden rounded-2xl border border-white/10 bg-navy-900',
+        'group relative min-h-[220px] overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100',
         SIZE_CLASSES[size],
         className
       )}

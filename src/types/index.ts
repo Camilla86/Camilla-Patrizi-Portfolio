@@ -1,46 +1,52 @@
 // Tipi condivisi per i contenuti del sito.
 
-export type MediaType = 'foto' | 'video' | 'immagine-creata';
+export type MediaType = 'video' | 'landing' | 'analisi' | 'workflow' | 'app';
+
+export type ProjectCategorySlug =
+  | 'video-social'
+  | 'landing-page'
+  | 'analisi-competitor'
+  | 'analisi-societa'
+  | 'workflow-ai'
+  | 'mini-app-tool';
+
+export interface CaseStudyMetric {
+  label: string;
+  value: string;
+}
 
 export interface PortfolioItem {
   slug: string;
   title: string;
   excerpt: string;
-  description: string;
-  categorySlug: string;
+  /** Sintesi dell'obiettivo del progetto (case study). */
+  challenge: string;
+  /** Approccio e processo seguito per raggiungere il risultato. */
+  approach: string;
+  /** Risultati misurabili ottenuti (case study). */
+  results: CaseStudyMetric[];
+  categorySlug: ProjectCategorySlug;
   mediaType: MediaType;
+  client: string;
+  sector: string;
+  tools: string[];
   coverImage: string;
-  /** Presente solo per i pezzi con mediaType === 'video'. */
-  videoUrl?: string;
   gallery: string[];
+  videoUrl?: string;
   tags: string[];
   date: string; // ISO 8601
-  location?: string;
+  duration: string;
 }
 
 export interface Category {
-  slug: string;
+  slug: ProjectCategorySlug;
   name: string;
+  shortName: string;
   description: string;
   coverImage: string;
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
-
-export interface BlogPostMeta {
-  slug: string;
-  title: string;
-  excerpt: string;
-  coverImage: string;
-  date: string; // ISO 8601
-  tags: string[];
-}
-
-export interface BlogPost extends BlogPostMeta {
-  content: string; // MDX grezzo
+  icon: string;
+  /** Cosa include il servizio, mostrato nella pagina Competenze/Servizi. */
+  deliverables: string[];
 }
 
 export interface NavItem {

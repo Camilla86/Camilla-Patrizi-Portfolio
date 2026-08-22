@@ -10,12 +10,12 @@ interface PortfolioCardProps {
   priority?: boolean;
 }
 
-/** Card di un pezzo di portfolio, usata nel catalogo, nelle categorie e nei correlati. */
+/** Card di un case study, usata nel catalogo, nelle categorie e nei progetti correlati. */
 export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
   return (
     <Link
       href={`/portfolio/${item.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-white/10 bg-navy-900 transition-colors hover:border-electric-400/50"
+      className="group block overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-colors hover:border-teal-400"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
@@ -27,7 +27,7 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {item.mediaType === 'video' && (
-          <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/40 backdrop-blur">
+          <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 backdrop-blur">
             <Play className="h-4 w-4 text-white" aria-hidden="true" />
           </span>
         )}
@@ -35,8 +35,8 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
 
       <div className="p-5">
         <Badge>{mediaTypeLabel(item.mediaType)}</Badge>
-        <h3 className="mt-3 text-lg font-semibold leading-snug text-white">{item.title}</h3>
-        <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-400">{item.excerpt}</p>
+        <h3 className="mt-3 text-lg font-semibold leading-snug text-neutral-950">{item.title}</h3>
+        <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-neutral-600">{item.excerpt}</p>
       </div>
     </Link>
   );

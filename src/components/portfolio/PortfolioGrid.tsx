@@ -130,20 +130,14 @@ export function PortfolioGrid({ items, categories, showCategoryFilter = true }: 
                 id="filter-tipo-solo"
                 value={tipo}
                 onChange={(e) => updateTipo(e.target.value)}
-                className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-100 focus:border-electric-400"
+                className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 focus:border-teal-500 focus:bg-white"
               >
-                <option value="tutti" className="bg-navy-900">
-                  Tutti i tipi
-                </option>
-                <option value="foto" className="bg-navy-900">
-                  Foto
-                </option>
-                <option value="video" className="bg-navy-900">
-                  Video
-                </option>
-                <option value="immagine-creata" className="bg-navy-900">
-                  Immagine creata
-                </option>
+                <option value="tutti">Tutti i tipi</option>
+                <option value="video">Video social</option>
+                <option value="landing">Landing page</option>
+                <option value="analisi">Analisi</option>
+                <option value="workflow">Workflow AI</option>
+                <option value="app">Mini app</option>
               </select>
             </div>
           )}
@@ -151,7 +145,7 @@ export function PortfolioGrid({ items, categories, showCategoryFilter = true }: 
         </div>
       </div>
 
-      <p className="mt-6 text-sm text-slate-500" aria-live="polite">
+      <p className="mt-6 text-sm text-neutral-500" aria-live="polite">
         {filteredItems.length} {filteredItems.length === 1 ? 'risultato' : 'risultati'}
       </p>
 
@@ -162,7 +156,7 @@ export function PortfolioGrid({ items, categories, showCategoryFilter = true }: 
           ))}
         </div>
       ) : (
-        <p className="mt-16 text-center text-slate-500">
+        <p className="mt-16 text-center text-neutral-500">
           Nessun risultato per i filtri selezionati. Prova a modificare la ricerca.
         </p>
       )}
