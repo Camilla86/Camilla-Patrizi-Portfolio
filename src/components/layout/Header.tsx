@@ -12,9 +12,9 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-navy-950/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur-xl">
       <div className="section-container relative flex h-20 items-center justify-between">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-white">
+        <Link href="/" className="text-lg font-semibold tracking-tight text-neutral-950">
           {siteConfig.name}
         </Link>
 
@@ -27,7 +27,7 @@ export function Header() {
                   aria-current={pathname === item.href ? 'page' : undefined}
                   className={cn(
                     'text-sm font-medium tracking-tight transition-colors',
-                    pathname === item.href ? 'text-electric-300' : 'text-slate-300 hover:text-white'
+                    pathname === item.href ? 'text-teal-600' : 'text-neutral-600 hover:text-neutral-950'
                   )}
                 >
                   {item.label}
