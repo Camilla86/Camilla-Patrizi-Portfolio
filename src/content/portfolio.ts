@@ -1,183 +1,170 @@
 import type { PortfolioItem } from '@/types';
 
-// Contenuti demo del portfolio. Sostituisci testi, date e percorsi immagine/video
-// con quelli reali del content creator prima della messa online.
+// Case study del portfolio. Sostituisci testi, metriche e percorsi immagine/video
+// con i contenuti reali prima della messa online (vedi README).
 export const portfolioItems: PortfolioItem[] = [
   {
-    slug: 'campagna-ss-25-flou',
-    title: 'Campagna SS25 — Flou',
-    excerpt: 'Direzione creativa e scatti per la campagna primavera/estate del brand Flou.',
-    description:
-      'Una campagna fotografica pensata per raccontare la nuova collezione SS25 attraverso una luce naturale morbida e composizioni minimali. Il lavoro ha incluso moodboard, scouting location e post-produzione color grading.',
-    categorySlug: 'moda-editoriale',
-    mediaType: 'foto',
-    coverImage: '/images/portfolio/campagna-ss-25-flou-1.svg',
-    gallery: ['/images/portfolio/campagna-ss-25-flou-1.svg', '/images/portfolio/campagna-ss-25-flou-2.svg'],
-    tags: ['campagna', 'moda', 'editoriale'],
+    slug: 'serie-reel-lancio-aurora-skincare',
+    title: 'Serie Reel di lancio — Aurora Skincare',
+    excerpt: 'Una serie di 6 Reel verticali per il lancio di una nuova linea skincare, pensati per il mobile-first.',
+    challenge:
+      'Aurora Skincare doveva lanciare una nuova linea prodotto senza budget per uno spot tradizionale, puntando tutto sui social. Serviva un contenuto in grado di generare attenzione nei primi 2 secondi e spingere al salvataggio del profilo.',
+    approach:
+      'Ho sviluppato un concept narrativo in 6 episodi, uno per beneficio prodotto, con copy sincronizzato ai sottotitoli e un ritmo di montaggio pensato per il formato verticale. Ogni Reel è stato pubblicato con un piano editoriale su 3 settimane e testato in due varianti di apertura (hook).',
+    results: [
+      { label: 'Copertura totale', value: '410K visualizzazioni' },
+      { label: 'Tasso di interazione', value: '+38% vs media account' },
+      { label: 'Nuovi follower', value: '+2.100 in 3 settimane' },
+    ],
+    categorySlug: 'video-social',
+    mediaType: 'video',
+    client: 'Aurora Skincare',
+    sector: 'Beauty & Cosmetica',
+    tools: ['Adobe Premiere Pro', 'CapCut', 'Meta Business Suite'],
+    coverImage: '/images/portfolio/serie-reel-lancio-aurora-skincare-1.svg',
+    videoUrl: '/videos/serie-reel-lancio-aurora-skincare.mp4',
+    gallery: [
+      '/images/portfolio/serie-reel-lancio-aurora-skincare-1.svg',
+      '/images/portfolio/serie-reel-lancio-aurora-skincare-2.svg',
+    ],
+    tags: ['reel', 'social video', 'lancio prodotto'],
     date: '2026-05-12',
-    location: 'Milano, Italia',
+    duration: '3 settimane',
   },
   {
-    slug: 'editoriale-vogue-notte',
-    title: 'Editoriale Notturno per Vogue Italia',
-    excerpt: 'Serie editoriale ispirata all\'estetica cinematografica urbana notturna.',
-    description:
-      'Editoriale realizzato per un magazine di moda, incentrato su luci al neon e atmosfere notturne. Un lavoro di squadra con stylist e make-up artist per un risultato dal forte impatto visivo.',
-    categorySlug: 'moda-editoriale',
-    mediaType: 'foto',
-    coverImage: '/images/portfolio/editoriale-vogue-notte-1.svg',
-    gallery: ['/images/portfolio/editoriale-vogue-notte-1.svg', '/images/portfolio/editoriale-vogue-notte-2.svg'],
-    tags: ['editoriale', 'notturno', 'moda'],
+    slug: 'landing-page-corso-fotografia-digitale',
+    title: 'Landing Page — Corso di Fotografia Digitale',
+    excerpt: 'Landing page ad alta conversione per la vendita di un corso online, dal wireframe alla pubblicazione.',
+    challenge:
+      'Un formatore indipendente aveva un corso video pronto ma nessuna pagina in grado di convertire il traffico proveniente dai social in iscrizioni. La pagina esistente era lenta e poco chiara sul valore offerto.',
+    approach:
+      'Ho progettato una struttura in 7 sezioni (promessa, programma, prova sociale, FAQ, offerta) con copy orientato al beneficio, un design pulito coerente col brand e un form di iscrizione in due passaggi. Sviluppo responsive con attenzione a tempi di caricamento e Core Web Vitals.',
+    results: [
+      { label: 'Tasso di conversione', value: '6,4%' },
+      { label: 'Tempo di caricamento (LCP)', value: '1,2s' },
+      { label: 'Iscrizioni nel primo mese', value: '184' },
+    ],
+    categorySlug: 'landing-page',
+    mediaType: 'landing',
+    client: 'Formatore indipendente',
+    sector: 'Formazione online',
+    tools: ['Next.js', 'Tailwind CSS', 'Google Analytics 4'],
+    coverImage: '/images/portfolio/landing-page-corso-fotografia-digitale-1.svg',
+    gallery: [
+      '/images/portfolio/landing-page-corso-fotografia-digitale-1.svg',
+      '/images/portfolio/landing-page-corso-fotografia-digitale-2.svg',
+    ],
+    tags: ['landing page', 'conversione', 'e-learning'],
     date: '2026-03-02',
-    location: 'Milano, Italia',
+    duration: '2 settimane',
   },
   {
-    slug: 'backstage-defile-milano',
-    title: 'Backstage Défilé Milano',
-    excerpt: 'Video backstage dietro le quinte della settimana della moda di Milano.',
-    description:
-      'Un video documentario girato dietro le quinte di una sfilata durante la Milano Fashion Week, tra prove abito, trucco e i minuti prima dell\'ingresso in passerella.',
-    categorySlug: 'moda-editoriale',
-    mediaType: 'video',
-    coverImage: '/images/portfolio/backstage-defile-milano-1.svg',
-    videoUrl: '/videos/backstage-defile-milano.mp4',
-    gallery: ['/images/portfolio/backstage-defile-milano-1.svg', '/images/portfolio/backstage-defile-milano-2.svg'],
-    tags: ['backstage', 'video', 'fashion week'],
+    slug: 'analisi-competitor-brand-abbigliamento-sostenibile',
+    title: 'Analisi Competitor — Brand di abbigliamento sostenibile',
+    excerpt: 'Mappatura di 8 competitor diretti per orientare la strategia digitale di un brand emergente.',
+    challenge:
+      'Un brand emergente di moda sostenibile non aveva una visione chiara di come si posizionavano i competitor sui canali digitali, rischiando di duplicare contenuti già presidiati dal mercato.',
+    approach:
+      'Ho mappato 8 competitor diretti e indiretti analizzando posizionamento, tono di voce, canali attivi, frequenza di pubblicazione e tipologia di contenuti con maggiore engagement. Il lavoro si è concluso con un report operativo con 3 aree di opportunità immediatamente attivabili.',
+    results: [
+      { label: 'Competitor analizzati', value: '8' },
+      { label: 'Opportunità individuate', value: '12' },
+      { label: 'Tempo di consegna', value: '10 giorni lavorativi' },
+    ],
+    categorySlug: 'analisi-competitor',
+    mediaType: 'analisi',
+    client: 'Brand moda sostenibile',
+    sector: 'Fashion & Sostenibilità',
+    tools: ['Similarweb', 'Meta Ad Library', 'Fogli di calcolo condivisi'],
+    coverImage: '/images/portfolio/analisi-competitor-brand-abbigliamento-sostenibile-1.svg',
+    gallery: [
+      '/images/portfolio/analisi-competitor-brand-abbigliamento-sostenibile-1.svg',
+      '/images/portfolio/analisi-competitor-brand-abbigliamento-sostenibile-2.svg',
+    ],
+    tags: ['analisi competitor', 'strategia', 'moda'],
     date: '2026-02-18',
-    location: 'Milano, Italia',
+    duration: '10 giorni',
   },
   {
-    slug: 'spot-brand-aurora',
-    title: 'Spot Brand — Aurora Skincare',
-    excerpt: 'Spot pubblicitario da 30 secondi per il lancio di una linea skincare.',
-    description:
-      'Concept, ripresa e montaggio di uno spot pubblicitario per il lancio prodotto di un brand skincare, con un linguaggio visivo pulito e luminoso coerente con l\'identità del brand.',
-    categorySlug: 'brand-lifestyle',
-    mediaType: 'video',
-    coverImage: '/images/portfolio/spot-brand-aurora-1.svg',
-    videoUrl: '/videos/spot-brand-aurora.mp4',
-    gallery: ['/images/portfolio/spot-brand-aurora-1.svg', '/images/portfolio/spot-brand-aurora-2.svg'],
-    tags: ['brand', 'spot', 'skincare'],
-    date: '2026-06-01',
-    location: 'Torino, Italia',
-  },
-  {
-    slug: 'lifestyle-mattina-brand-x',
-    title: 'Lifestyle Mattina — Brand X',
-    excerpt: 'Serie fotografica lifestyle per una routine mattutina sponsorizzata.',
-    description:
-      'Set fotografico realizzato in un appartamento luminoso per raccontare una routine mattutina in collaborazione con un brand di prodotti per la casa.',
-    categorySlug: 'brand-lifestyle',
-    mediaType: 'foto',
-    coverImage: '/images/portfolio/lifestyle-mattina-brand-x-1.svg',
-    gallery: [
-      '/images/portfolio/lifestyle-mattina-brand-x-1.svg',
-      '/images/portfolio/lifestyle-mattina-brand-x-2.svg',
+    slug: 'analisi-digitale-studio-professionale',
+    title: 'Analisi Società — Studio professionale locale',
+    excerpt: 'Audit completo della presenza digitale di uno studio professionale, con piano di priorità a 90 giorni.',
+    challenge:
+      'Uno studio professionale con una solida reputazione offline non generava contatti dal proprio sito, senza capire dove si perdesse il potenziale flusso di clienti.',
+    approach:
+      'Ho condotto un audit su sito, SEO tecnica, canali social e customer journey, individuando colli di bottiglia nel funnel di contatto. Il risultato è stato un piano di priorità su 90 giorni, con interventi ordinati per impatto e sforzo richiesto.',
+    results: [
+      { label: 'Criticità individuate', value: '15' },
+      { label: 'Interventi ad alta priorità', value: '5' },
+      { label: 'Richieste di contatto', value: '+27% in 90 giorni' },
     ],
-    tags: ['lifestyle', 'brand', 'casa'],
-    date: '2026-04-20',
-    location: 'Bologna, Italia',
-  },
-  {
-    slug: 'unboxing-tech-brand',
-    title: 'Unboxing Creativo — Tech Brand',
-    excerpt: 'Video unboxing stilizzato per il lancio di un nuovo dispositivo tech.',
-    description:
-      'Un video unboxing curato nei minimi dettagli, con inquadrature macro e sound design dedicato, pensato per i canali social del brand.',
-    categorySlug: 'brand-lifestyle',
-    mediaType: 'video',
-    coverImage: '/images/portfolio/unboxing-tech-brand-1.svg',
-    videoUrl: '/videos/unboxing-tech-brand.mp4',
-    gallery: ['/images/portfolio/unboxing-tech-brand-1.svg', '/images/portfolio/unboxing-tech-brand-2.svg'],
-    tags: ['unboxing', 'tech', 'video'],
-    date: '2025-12-10',
-    location: 'Milano, Italia',
-  },
-  {
-    slug: 'islanda-luci-boreali',
-    title: 'Islanda — Luci del Nord',
-    excerpt: 'Serie fotografica notturna dedicata all\'aurora boreale islandese.',
-    description:
-      'Un viaggio di dieci giorni in Islanda per catturare l\'aurora boreale e i paesaggi vulcanici, tra lunghe esposizioni e temperature sotto zero.',
-    categorySlug: 'viaggio',
-    mediaType: 'foto',
-    coverImage: '/images/portfolio/islanda-luci-boreali-1.svg',
-    gallery: ['/images/portfolio/islanda-luci-boreali-1.svg', '/images/portfolio/islanda-luci-boreali-2.svg'],
-    tags: ['viaggio', 'natura', 'notturna'],
+    categorySlug: 'analisi-societa',
+    mediaType: 'analisi',
+    client: 'Studio professionale',
+    sector: 'Servizi professionali',
+    tools: ['Google Search Console', 'PageSpeed Insights', 'Hotjar'],
+    coverImage: '/images/portfolio/analisi-digitale-studio-professionale-1.svg',
+    gallery: [
+      '/images/portfolio/analisi-digitale-studio-professionale-1.svg',
+      '/images/portfolio/analisi-digitale-studio-professionale-2.svg',
+    ],
+    tags: ['analisi società', 'audit digitale', 'lead generation'],
     date: '2026-01-15',
-    location: 'Islanda',
+    duration: '3 settimane',
   },
   {
-    slug: 'marocco-deserto-agafay',
-    title: 'Marocco — Deserto di Agafay',
-    excerpt: 'Documentario breve girato nel deserto di Agafay al tramonto.',
-    description:
-      'Un cortometraggio che racconta il silenzio e i colori del deserto di Agafay, tra dune, luce dorata e culture locali.',
-    categorySlug: 'viaggio',
-    mediaType: 'video',
-    coverImage: '/images/portfolio/marocco-deserto-agafay-1.svg',
-    videoUrl: '/videos/marocco-deserto-agafay.mp4',
-    gallery: ['/images/portfolio/marocco-deserto-agafay-1.svg', '/images/portfolio/marocco-deserto-agafay-2.svg'],
-    tags: ['viaggio', 'documentario', 'deserto'],
-    date: '2025-11-05',
-    location: 'Marrakech, Marocco',
-  },
-  {
-    slug: 'giappone-kyoto-autunno',
-    title: 'Kyoto in Autunno',
-    excerpt: 'Serie fotografica tra templi e foglie rosse nella stagione dei momiji.',
-    description:
-      'Un racconto per immagini della città di Kyoto durante il momiji, la stagione delle foglie rosse, tra templi storici e giardini zen.',
-    categorySlug: 'viaggio',
-    mediaType: 'foto',
-    coverImage: '/images/portfolio/giappone-kyoto-autunno-1.svg',
-    gallery: ['/images/portfolio/giappone-kyoto-autunno-1.svg', '/images/portfolio/giappone-kyoto-autunno-2.svg'],
-    tags: ['viaggio', 'giappone', 'autunno'],
-    date: '2026-05-30',
-    location: 'Kyoto, Giappone',
-  },
-  {
-    slug: 'ritratto-serie-identita',
-    title: 'Serie "Identità"',
-    excerpt: 'Serie di ritratti autoriali sul tema dell\'identità personale.',
-    description:
-      'Un progetto personale di ritrattistica in bianco e nero che esplora il tema dell\'identità attraverso sguardi e luce drammatica.',
-    categorySlug: 'ritratto',
-    mediaType: 'foto',
-    coverImage: '/images/portfolio/ritratto-serie-identita-1.svg',
-    gallery: ['/images/portfolio/ritratto-serie-identita-1.svg', '/images/portfolio/ritratto-serie-identita-2.svg'],
-    tags: ['ritratto', 'progetto personale', 'bianco e nero'],
-    date: '2026-06-20',
-    location: 'Firenze, Italia',
-  },
-  {
-    slug: 'ritratto-ai-sogni-urbani',
-    title: 'Sogni Urbani',
-    excerpt: 'Serie di immagini create digitalmente ispirate agli skyline metropolitani.',
-    description:
-      'Una serie di immagini create con strumenti digitali, che reinterpretano gli skyline urbani in chiave onirica, unendo fotografia e composizione generativa.',
-    categorySlug: 'ritratto',
-    mediaType: 'immagine-creata',
-    coverImage: '/images/portfolio/ritratto-ai-sogni-urbani-1.svg',
-    gallery: [
-      '/images/portfolio/ritratto-ai-sogni-urbani-1.svg',
-      '/images/portfolio/ritratto-ai-sogni-urbani-2.svg',
+    slug: 'workflow-ai-produzione-contenuti-editoriali',
+    title: 'Workflow AI — Produzione contenuti editoriali',
+    excerpt: 'Un workflow integrato con strumenti AI per dimezzare i tempi di produzione dei contenuti editoriali.',
+    challenge:
+      'Un piccolo team editoriale impiegava troppo tempo a passare manualmente da bozza testuale a contenuto pubblicato su più canali (blog, newsletter, social), con continui colli di bottiglia.',
+    approach:
+      'Ho progettato un workflow che collega generazione assistita da AI, revisione umana e pubblicazione multicanale, con checkpoint di controllo qualità in ogni fase. Il team ha ricevuto formazione e documentazione per gestire il workflow in autonomia.',
+    results: [
+      { label: 'Tempo di produzione', value: '-52%' },
+      { label: 'Contenuti pubblicati/mese', value: 'da 8 a 18' },
+      { label: 'Formazione al team', value: '2 sessioni pratiche' },
     ],
-    tags: ['immagine creata', 'urbano', 'sperimentale'],
-    date: '2026-04-02',
+    categorySlug: 'workflow-ai',
+    mediaType: 'workflow',
+    client: 'Redazione editoriale indipendente',
+    sector: 'Editoria digitale',
+    tools: ['Claude', 'Zapier', 'Notion'],
+    coverImage: '/images/portfolio/workflow-ai-produzione-contenuti-editoriali-1.svg',
+    gallery: [
+      '/images/portfolio/workflow-ai-produzione-contenuti-editoriali-1.svg',
+      '/images/portfolio/workflow-ai-produzione-contenuti-editoriali-2.svg',
+    ],
+    tags: ['workflow', 'automazione', 'intelligenza artificiale'],
+    date: '2025-12-10',
+    duration: '4 settimane',
   },
   {
-    slug: 'visioni-future-ai',
-    title: 'Visioni Future',
-    excerpt: 'Serie concettuale di immagini create sul tema del futuro e della tecnologia.',
-    description:
-      'Un progetto sperimentale di immagini create digitalmente per esplorare visivamente il rapporto tra essere umano e tecnologia in chiave futuristica.',
-    categorySlug: 'ritratto',
-    mediaType: 'immagine-creata',
-    coverImage: '/images/portfolio/visioni-future-ai-1.svg',
-    gallery: ['/images/portfolio/visioni-future-ai-1.svg', '/images/portfolio/visioni-future-ai-2.svg'],
-    tags: ['immagine creata', 'futuro', 'concettuale'],
-    date: '2026-02-28',
+    slug: 'mini-app-calcolo-preventivi-fotografia',
+    title: 'Mini App — Calcolo preventivi per servizi fotografici',
+    excerpt: 'Un piccolo strumento web che genera preventivi personalizzati in tempo reale per i clienti.',
+    challenge:
+      'I clienti chiedevano spesso preventivi personalizzati via email, con tempi di risposta lenti e un processo ripetitivo per chi doveva calcolarli manualmente ogni volta.',
+    approach:
+      'Ho progettato e sviluppato una mini app web con pochi campi essenziali (tipo di servizio, durata, extra) che calcola in tempo reale una stima di preventivo, inviando poi la richiesta dettagliata via email. Interfaccia minimale, veloce anche da mobile.',
+    results: [
+      { label: 'Tempo medio di risposta', value: 'da 24h a immediato' },
+      { label: 'Richieste gestite/mese', value: '+65%' },
+      { label: 'Tempo di sviluppo', value: '2 settimane' },
+    ],
+    categorySlug: 'mini-app-tool',
+    mediaType: 'app',
+    client: 'Studio fotografico',
+    sector: 'Servizi creativi',
+    tools: ['Next.js', 'TypeScript', 'Vercel'],
+    coverImage: '/images/portfolio/mini-app-calcolo-preventivi-fotografia-1.svg',
+    gallery: [
+      '/images/portfolio/mini-app-calcolo-preventivi-fotografia-1.svg',
+      '/images/portfolio/mini-app-calcolo-preventivi-fotografia-2.svg',
+    ],
+    tags: ['mini app', 'tool digitale', 'automazione'],
+    date: '2026-06-01',
+    duration: '2 settimane',
   },
 ];
 
@@ -186,7 +173,11 @@ export function getPortfolioItemBySlug(slug: string): PortfolioItem | undefined 
 }
 
 export function getRelatedPortfolioItems(item: PortfolioItem, limit = 3): PortfolioItem[] {
-  return portfolioItems
-    .filter((candidate) => candidate.slug !== item.slug && candidate.categorySlug === item.categorySlug)
-    .slice(0, limit);
+  const sameCategory = portfolioItems.filter(
+    (candidate) => candidate.slug !== item.slug && candidate.categorySlug === item.categorySlug
+  );
+  const others = portfolioItems.filter(
+    (candidate) => candidate.slug !== item.slug && candidate.categorySlug !== item.categorySlug
+  );
+  return [...sameCategory, ...others].slice(0, limit);
 }
