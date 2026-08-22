@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
     <div className="section-container py-16">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
 
-      <div className="prose prose-invert max-w-3xl prose-headings:tracking-tight prose-a:text-electric-300">
+      <div className="prose max-w-3xl prose-headings:tracking-tight prose-headings:text-neutral-950 prose-p:text-neutral-700 prose-a:text-teal-600">
         <h1>Privacy Policy</h1>
         <p>
           La presente informativa descrive le modalità di trattamento dei dati personali degli utenti che
