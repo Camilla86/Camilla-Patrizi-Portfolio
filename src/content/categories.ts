@@ -1,32 +1,97 @@
 import type { Category } from '@/types';
 
+// Le 6 competenze/servizi offerti, usate sia come categorie del Portfolio
+// sia come contenuto della pagina Competenze/Servizi (unica fonte di verità).
 export const categories: Category[] = [
   {
-    slug: 'moda-editoriale',
-    name: 'Moda & Editoriale',
+    slug: 'video-social',
+    name: 'Progetti Video Social',
+    shortName: 'Video Social',
     description:
-      'Campagne stagionali, editoriali per magazine e backstage dalle fashion week: uno sguardo cinematografico sulla moda.',
-    coverImage: '/images/categorie/moda-editoriale.svg',
+      'Video verticali per Instagram Reels, TikTok e YouTube Shorts pensati per fermare lo scroll e generare interazione reale.',
+    coverImage: '/images/servizi/video-social.svg',
+    icon: 'Clapperboard',
+    deliverables: [
+      'Concept, copy e storyboard del contenuto',
+      'Riprese o montaggio da materiale esistente',
+      'Sottotitoli, sound design e formati multipli (9:16, 1:1, 16:9)',
+      'Calendario editoriale e indicazioni di pubblicazione',
+    ],
   },
   {
-    slug: 'brand-lifestyle',
-    name: 'Brand & Lifestyle',
+    slug: 'landing-page',
+    name: 'Landing Page',
+    shortName: 'Landing Page',
     description:
-      'Contenuti realizzati in collaborazione con brand: spot, unboxing e narrazioni lifestyle pensate per la conversione.',
-    coverImage: '/images/categorie/brand-lifestyle.svg',
+      'Landing page rapide, responsive e orientate alla conversione, con copy persuasivo e struttura ottimizzata per il click.',
+    coverImage: '/images/servizi/landing-page.svg',
+    icon: 'LayoutTemplate',
+    deliverables: [
+      'Wireframe e design UI coerente col brand',
+      'Sviluppo responsive, veloce e accessibile',
+      'Copywriting orientato alla conversione',
+      'Integrazione form, tracking ed A/B test di base',
+    ],
   },
   {
-    slug: 'viaggio',
-    name: 'Viaggio & Paesaggio',
-    description: 'Racconti visivi da giro del mondo: paesaggi, culture e luce naturale come protagonisti assoluti.',
-    coverImage: '/images/categorie/viaggio.svg',
+    slug: 'analisi-competitor',
+    name: 'Analisi Competitor',
+    shortName: 'Analisi Competitor',
+    description:
+      'Mappatura dei principali competitor: posizionamento, contenuti, canali e strategia digitale, con opportunità concrete da cogliere.',
+    coverImage: '/images/servizi/analisi-competitor.svg',
+    icon: 'Radar',
+    deliverables: [
+      'Mappatura dei competitor diretti e indiretti',
+      'Analisi di posizionamento, tono di voce e canali',
+      'Benchmark di contenuti e performance social',
+      'Report con opportunità e raccomandazioni operative',
+    ],
   },
   {
-    slug: 'ritratto',
-    name: 'Ritratto',
+    slug: 'analisi-societa',
+    name: 'Analisi Società',
+    shortName: 'Analisi Società',
     description:
-      'Ritratti autoriali e immagini create digitalmente, dove fotografia e intelligenza artificiale si incontrano.',
-    coverImage: '/images/categorie/ritratto.svg',
+      'Analisi della presenza digitale e del posizionamento di un\'azienda: punti di forza, criticità e priorità di intervento.',
+    coverImage: '/images/servizi/analisi-societa.svg',
+    icon: 'Building2',
+    deliverables: [
+      'Audit del sito, dei canali social e della SEO',
+      'Analisi del target e del customer journey',
+      'Individuazione di criticità e rischi reputazionali',
+      'Piano di priorità con roadmap a breve e medio termine',
+    ],
+  },
+  {
+    slug: 'workflow-ai',
+    name: 'Workflow Integrato AI',
+    shortName: 'Workflow AI',
+    description:
+      'Automazioni e workflow basati su intelligenza artificiale che velocizzano la produzione di contenuti e la gestione operativa.',
+    coverImage: '/images/servizi/workflow-ai.svg',
+    icon: 'Workflow',
+    deliverables: [
+      'Mappatura dei processi da automatizzare',
+      'Progettazione del workflow con strumenti AI integrati',
+      'Collegamento tra tool (contenuti, dati, comunicazione)',
+      'Formazione all\'uso e documentazione del workflow',
+    ],
+  },
+  {
+    slug: 'mini-app-tool',
+    name: 'Mini App & Tool Digitali',
+    shortName: 'Mini App & Tool',
+    description:
+      'Piccole applicazioni e strumenti digitali su misura, pensati per semplificare un\'attività ricorrente o offrire un servizio interattivo.',
+    coverImage: '/images/servizi/mini-app-tool.svg',
+    icon: 'AppWindow',
+    deliverables: [
+      'Definizione della funzionalità chiave (MVP)',
+      'Interfaccia semplice, veloce e mobile-friendly',
+      'Sviluppo e test funzionale',
+      'Consegna con documentazione base per l\'uso',
+    ],
   },
 ];
 
