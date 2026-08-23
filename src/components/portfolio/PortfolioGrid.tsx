@@ -130,7 +130,7 @@ export function PortfolioGrid({ items, categories, showCategoryFilter = true }: 
                 id="filter-tipo-solo"
                 value={tipo}
                 onChange={(e) => updateTipo(e.target.value)}
-                className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 focus:border-teal-500 focus:bg-white"
+                className="rounded-full border border-stroke bg-surface px-4 py-3 text-sm text-text-primary focus:border-text-primary/40"
               >
                 <option value="tutti">Tutti i tipi</option>
                 <option value="video">Video social</option>
@@ -145,7 +145,7 @@ export function PortfolioGrid({ items, categories, showCategoryFilter = true }: 
         </div>
       </div>
 
-      <p className="mt-6 text-sm text-neutral-500" aria-live="polite">
+      <p className="mt-6 text-sm text-muted" aria-live="polite">
         {filteredItems.length} {filteredItems.length === 1 ? 'risultato' : 'risultati'}
       </p>
 
@@ -156,7 +156,7 @@ export function PortfolioGrid({ items, categories, showCategoryFilter = true }: 
           ))}
         </div>
       ) : (
-        <p className="mt-16 text-center text-neutral-500">
+        <p className="mt-16 text-center text-muted">
           Nessun risultato per i filtri selezionati. Prova a modificare la ricerca.
         </p>
       )}
