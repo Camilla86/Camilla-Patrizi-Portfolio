@@ -18,14 +18,14 @@ export default function PortfolioPage() {
     <div className="section-container py-16">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Portfolio' }]} />
 
-      <h1 className="text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">Portfolio</h1>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600">
+      <h1 className="font-display text-3xl italic tracking-tight text-text-primary sm:text-4xl">Portfolio</h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
         Una selezione di case study: video social, landing page, analisi competitor e società, workflow AI e mini
         app. Usa la ricerca e i filtri per trovare il progetto che ti interessa.
       </p>
 
       <div className="mt-10">
-        <Suspense fallback={<p className="text-neutral-500">Caricamento portfolio…</p>}>
+        <Suspense fallback={<p className="text-muted">Caricamento portfolio…</p>}>
           <PortfolioGrid items={portfolioItems} categories={categories} />
         </Suspense>
       </div>
