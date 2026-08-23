@@ -68,8 +68,8 @@ export function ContactForm() {
   if (status === 'success') {
     return (
       <div role="status" aria-live="polite" className="glass-card p-8 text-center">
-        <p className="text-lg font-semibold text-neutral-950">Messaggio inviato!</p>
-        <p className="mt-2 text-sm text-neutral-600">Grazie per avermi scritto, ti risponderò al più presto.</p>
+        <p className="font-display text-lg italic text-text-primary">Messaggio inviato!</p>
+        <p className="mt-2 text-sm text-muted">Grazie per avermi scritto, ti risponderò al più presto.</p>
       </div>
     );
   }
@@ -77,7 +77,7 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <div>
-        <label htmlFor="nome" className="mb-2 block text-sm font-medium text-neutral-800">
+        <label htmlFor="nome" className="mb-2 block text-sm font-medium text-text-primary">
           Nome
         </label>
         <input
@@ -87,17 +87,17 @@ export function ContactForm() {
           required
           aria-invalid={Boolean(fieldErrors.nome)}
           aria-describedby={fieldErrors.nome ? 'nome-error' : undefined}
-          className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 focus:border-teal-500 focus:bg-white"
+          className="w-full rounded-xl border border-stroke bg-bg px-4 py-3 text-sm text-text-primary focus:border-text-primary/40"
         />
         {fieldErrors.nome && (
-          <p id="nome-error" className="mt-1.5 text-sm text-red-600">
+          <p id="nome-error" className="mt-1.5 text-sm text-red-400">
             {fieldErrors.nome}
           </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-2 block text-sm font-medium text-neutral-800">
+        <label htmlFor="email" className="mb-2 block text-sm font-medium text-text-primary">
           Email
         </label>
         <input
@@ -107,30 +107,30 @@ export function ContactForm() {
           required
           aria-invalid={Boolean(fieldErrors.email)}
           aria-describedby={fieldErrors.email ? 'email-error' : undefined}
-          className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 focus:border-teal-500 focus:bg-white"
+          className="w-full rounded-xl border border-stroke bg-bg px-4 py-3 text-sm text-text-primary focus:border-text-primary/40"
         />
         {fieldErrors.email && (
-          <p id="email-error" className="mt-1.5 text-sm text-red-600">
+          <p id="email-error" className="mt-1.5 text-sm text-red-400">
             {fieldErrors.email}
           </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="riferimento" className="mb-2 block text-sm font-medium text-neutral-800">
-          Riferimento progetto o servizio <span className="text-neutral-400">(opzionale)</span>
+        <label htmlFor="riferimento" className="mb-2 block text-sm font-medium text-text-primary">
+          Riferimento progetto o servizio <span className="text-muted">(opzionale)</span>
         </label>
         <input
           id="riferimento"
           name="riferimento"
           type="text"
           defaultValue={riferimentoIniziale}
-          className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 focus:border-teal-500 focus:bg-white"
+          className="w-full rounded-xl border border-stroke bg-bg px-4 py-3 text-sm text-text-primary focus:border-text-primary/40"
         />
       </div>
 
       <div>
-        <label htmlFor="messaggio" className="mb-2 block text-sm font-medium text-neutral-800">
+        <label htmlFor="messaggio" className="mb-2 block text-sm font-medium text-text-primary">
           Messaggio
         </label>
         <textarea
@@ -140,17 +140,17 @@ export function ContactForm() {
           required
           aria-invalid={Boolean(fieldErrors.messaggio)}
           aria-describedby={fieldErrors.messaggio ? 'messaggio-error' : undefined}
-          className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 focus:border-teal-500 focus:bg-white"
+          className="w-full rounded-xl border border-stroke bg-bg px-4 py-3 text-sm text-text-primary focus:border-text-primary/40"
         />
         {fieldErrors.messaggio && (
-          <p id="messaggio-error" className="mt-1.5 text-sm text-red-600">
+          <p id="messaggio-error" className="mt-1.5 text-sm text-red-400">
             {fieldErrors.messaggio}
           </p>
         )}
       </div>
 
       {formError && (
-        <p role="alert" className="text-sm text-red-600">
+        <p role="alert" className="text-sm text-red-400">
           {formError}
         </p>
       )}
