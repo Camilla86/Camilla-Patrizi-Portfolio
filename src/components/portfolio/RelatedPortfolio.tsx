@@ -11,7 +11,7 @@ export function RelatedPortfolio({ items }: RelatedPortfolioProps) {
 
   return (
     <section aria-labelledby="related-heading" className="section-container py-20">
-      <h2 id="related-heading" className="text-2xl font-semibold tracking-tight text-neutral-950">
+      <h2 id="related-heading" className="font-display text-2xl italic tracking-tight text-text-primary">
         Progetti correlati
       </h2>
       <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

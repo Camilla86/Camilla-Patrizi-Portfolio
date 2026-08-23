@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Instrument_Serif } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SkipLink } from '@/components/layout/SkipLink';
@@ -10,7 +10,16 @@ import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-inter',
+  display: 'swap',
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['italic', 'normal'],
+  variable: '--font-instrument-serif',
   display: 'swap',
 });
 
@@ -42,8 +51,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it" className={inter.variable}>
-      <body className="flex min-h-screen flex-col font-sans">
+    <html lang="it" className={`${inter.variable} ${instrumentSerif.variable}`}>
+      <body className="flex min-h-screen flex-col font-body">
         <SkipLink />
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <Header />

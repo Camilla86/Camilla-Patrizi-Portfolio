@@ -27,7 +27,7 @@ const ICONS: Record<string, typeof Clapperboard> = {
 
 function ServiceIcon({ name }: { name: string }) {
   const Icon = ICONS[name] ?? Clapperboard;
-  return <Icon className="h-6 w-6 text-teal-600" aria-hidden="true" />;
+  return <Icon className="h-6 w-6 text-text-primary" aria-hidden="true" />;
 }
 
 function ServiceCard({ category }: { category: Category }) {
@@ -44,19 +44,19 @@ function ServiceCard({ category }: { category: Category }) {
           />
         </div>
         <div className="p-6 sm:p-8">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-teal-50">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-stroke">
             <ServiceIcon name={category.icon} />
           </span>
-          <h2 className="mt-4 text-xl font-semibold tracking-tight text-neutral-950">{category.name}</h2>
-          <p className="mt-2 text-sm leading-relaxed text-neutral-600">{category.description}</p>
+          <h2 className="mt-4 font-display text-xl italic tracking-tight text-text-primary">{category.name}</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{category.description}</p>
 
-          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-400">
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
             Cosa include
           </p>
           <ul className="mt-3 space-y-2">
             {category.deliverables.map((deliverable) => (
-              <li key={deliverable} className="flex items-start gap-2.5 text-sm text-neutral-700">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true" />
+              <li key={deliverable} className="flex items-start gap-2.5 text-sm text-text-primary/90">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-text-primary" aria-hidden="true" />
                 {deliverable}
               </li>
             ))}
@@ -88,10 +88,10 @@ export default function ServicesPage() {
       <div className="section-container py-16">
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Competenze' }]} />
 
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
+        <h1 className="font-display text-3xl italic tracking-tight text-text-primary sm:text-4xl">
           Competenze & Servizi
         </h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
           Sei aree in cui posso supportare brand e professionisti: dalla produzione di contenuti video ai
           workflow potenziati dall&apos;intelligenza artificiale. Ogni servizio è pensato per portare un
           risultato concreto e misurabile.

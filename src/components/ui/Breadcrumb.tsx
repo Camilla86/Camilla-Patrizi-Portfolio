@@ -14,21 +14,21 @@ interface BreadcrumbProps {
 export function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb" className="mb-8">
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-neutral-500">
+      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
             <li key={`${item.label}-${index}`} className="flex items-center gap-1.5">
               {item.href && !isLast ? (
-                <Link href={item.href} className="transition-colors hover:text-teal-600">
+                <Link href={item.href} className="transition-colors hover:text-text-primary">
                   {item.label}
                 </Link>
               ) : (
-                <span aria-current={isLast ? 'page' : undefined} className="text-neutral-900">
+                <span aria-current={isLast ? 'page' : undefined} className="text-text-primary">
                   {item.label}
                 </span>
               )}
-              {!isLast && <ChevronRight className="h-3.5 w-3.5 text-neutral-300" aria-hidden="true" />}
+              {!isLast && <ChevronRight className="h-3.5 w-3.5 text-stroke" aria-hidden="true" />}
             </li>
           );
         })}
