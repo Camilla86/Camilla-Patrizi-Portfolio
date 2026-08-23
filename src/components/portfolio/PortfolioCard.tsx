@@ -15,7 +15,7 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
   return (
     <Link
       href={`/portfolio/${item.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-colors hover:border-teal-400"
+      className="group block overflow-hidden rounded-3xl border border-stroke bg-surface transition-colors hover:border-text-primary/30"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
@@ -35,8 +35,8 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
 
       <div className="p-5">
         <Badge>{mediaTypeLabel(item.mediaType)}</Badge>
-        <h3 className="mt-3 text-lg font-semibold leading-snug text-neutral-950">{item.title}</h3>
-        <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-neutral-600">{item.excerpt}</p>
+        <h3 className="mt-3 font-display text-lg italic leading-snug text-text-primary">{item.title}</h3>
+        <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{item.excerpt}</p>
       </div>
     </Link>
   );
