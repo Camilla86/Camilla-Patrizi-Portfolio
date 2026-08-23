@@ -35,16 +35,16 @@ export default function AboutPage() {
 
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <h1 className="text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
+            <h1 className="font-display text-3xl italic tracking-tight text-text-primary sm:text-4xl">
               {siteConfig.name}
             </h1>
-            <p className="mt-3 text-lg text-teal-600">{siteConfig.tagline}</p>
-            <p className="mt-6 text-base leading-relaxed text-neutral-700">
+            <p className="mt-3 text-lg text-muted">{siteConfig.tagline}</p>
+            <p className="mt-6 text-base leading-relaxed text-muted">
               Lavoro all&apos;incrocio tra contenuti digitali e strategia: video social, landing page e analisi
               di mercato, uniti a workflow costruiti con l&apos;intelligenza artificiale per rendere ogni
               processo più veloce ed efficace.
             </p>
-            <p className="mt-4 text-base leading-relaxed text-neutral-700">
+            <p className="mt-4 text-base leading-relaxed text-muted">
               Ogni progetto, che sia un video, una landing page o un&apos;analisi competitor, nasce dalla stessa
               domanda: qual è il risultato concreto che vogliamo ottenere? Da lì costruisco un piano chiaro,
               misurabile e realizzabile nei tempi previsti.
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl border border-neutral-200 lg:justify-self-end">
+          <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl border border-stroke lg:justify-self-end">
             <Image
               src="/images/hero/chi-siamo.svg"
               alt={`Ritratto di ${siteConfig.name}`}
@@ -71,8 +71,8 @@ export default function AboutPage() {
         <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {VALUES.map((value) => (
             <div key={value.title} className="glass-card p-6">
-              <h2 className="text-lg font-semibold text-neutral-950">{value.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600">{value.description}</p>
+              <h2 className="font-display text-lg italic text-text-primary">{value.title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>
             </div>
           ))}
         </div>
