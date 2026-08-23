@@ -51,7 +51,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
 
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-neutral-200">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-stroke">
               <Image
                 src={item.coverImage}
                 alt={item.title}
@@ -70,7 +70,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
             </div>
 
             {item.mediaType === 'video' && (
-              <p className="mt-3 text-xs text-neutral-400">
+              <p className="mt-3 text-xs text-muted">
                 Anteprima placeholder: sostituisci con il file video reale in <code>/public/videos</code>.
               </p>
             )}
@@ -80,7 +80,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
                 {item.gallery.slice(1).map((src) => (
                   <div
                     key={src}
-                    className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200"
+                    className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-stroke"
                   >
                     <Image
                       src={src}
@@ -97,20 +97,20 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
             {/* Case study: sfida, approccio e risultati del progetto */}
             <div className="mt-10 space-y-8">
               <div>
-                <h2 className="text-xl font-semibold tracking-tight text-neutral-950">La sfida</h2>
-                <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.challenge}</p>
+                <h2 className="font-display text-xl italic tracking-tight text-text-primary">La sfida</h2>
+                <p className="mt-3 text-base leading-relaxed text-muted">{item.challenge}</p>
               </div>
               <div>
-                <h2 className="text-xl font-semibold tracking-tight text-neutral-950">L&apos;approccio</h2>
-                <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.approach}</p>
+                <h2 className="font-display text-xl italic tracking-tight text-text-primary">L&apos;approccio</h2>
+                <p className="mt-3 text-base leading-relaxed text-muted">{item.approach}</p>
               </div>
               <div>
-                <h2 className="text-xl font-semibold tracking-tight text-neutral-950">I risultati</h2>
+                <h2 className="font-display text-xl italic tracking-tight text-text-primary">I risultati</h2>
                 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                   {item.results.map((result) => (
                     <div key={result.label} className="glass-card p-5">
-                      <p className="text-2xl font-semibold tracking-tight text-teal-600">{result.value}</p>
-                      <p className="mt-1 text-sm text-neutral-500">{result.label}</p>
+                      <p className="font-display text-2xl italic tracking-tight text-text-primary">{result.value}</p>
+                      <p className="mt-1 text-sm text-muted">{result.label}</p>
                     </div>
                   ))}
                 </div>
@@ -120,31 +120,31 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
 
           <div>
             <Badge>{mediaTypeLabel(item.mediaType)}</Badge>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
+            <h1 className="mt-4 font-display text-3xl italic tracking-tight text-text-primary sm:text-4xl">
               {item.title}
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-neutral-600">{item.excerpt}</p>
+            <p className="mt-4 text-base leading-relaxed text-muted">{item.excerpt}</p>
 
-            <dl className="mt-6 space-y-3 text-sm text-neutral-600">
+            <dl className="mt-6 space-y-3 text-sm text-muted">
               <div className="flex items-center gap-2.5">
-                <Building2 className="h-4 w-4 text-teal-600" aria-hidden="true" />
+                <Building2 className="h-4 w-4 text-text-primary" aria-hidden="true" />
                 <dt className="sr-only">Cliente</dt>
                 <dd>
                   {item.client} — {item.sector}
                 </dd>
               </div>
               <div className="flex items-center gap-2.5">
-                <CalendarDays className="h-4 w-4 text-teal-600" aria-hidden="true" />
+                <CalendarDays className="h-4 w-4 text-text-primary" aria-hidden="true" />
                 <dt className="sr-only">Data</dt>
                 <dd>{formatDate(item.date)}</dd>
               </div>
               <div className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 text-teal-600" aria-hidden="true" />
+                <Clock className="h-4 w-4 text-text-primary" aria-hidden="true" />
                 <dt className="sr-only">Durata</dt>
                 <dd>{item.duration}</dd>
               </div>
               <div className="flex items-start gap-2.5">
-                <Wrench className="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true" />
+                <Wrench className="mt-0.5 h-4 w-4 shrink-0 text-text-primary" aria-hidden="true" />
                 <dt className="sr-only">Strumenti</dt>
                 <dd>{item.tools.join(', ')}</dd>
               </div>
