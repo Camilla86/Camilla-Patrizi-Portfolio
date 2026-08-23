@@ -31,7 +31,7 @@ export function PortfolioFilters({
           id="filter-categoria"
           value={categoryValue}
           onChange={(e) => onCategoryChange(e.target.value)}
-          className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-teal-500 focus:bg-white"
+          className="rounded-full border border-stroke bg-surface px-4 py-3 text-sm text-text-primary transition-colors focus:border-text-primary/40"
         >
           <option value="tutte">Tutte le categorie</option>
           {categories.map((category) => (
@@ -50,7 +50,7 @@ export function PortfolioFilters({
           id="filter-tipo"
           value={mediaTypeValue}
           onChange={(e) => onMediaTypeChange(e.target.value)}
-          className="rounded-full border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 transition-colors focus:border-teal-500 focus:bg-white"
+          className="rounded-full border border-stroke bg-surface px-4 py-3 text-sm text-text-primary transition-colors focus:border-text-primary/40"
         >
           <option value="tutti">Tutti i tipi</option>
           {MEDIA_TYPES.map((type) => (
