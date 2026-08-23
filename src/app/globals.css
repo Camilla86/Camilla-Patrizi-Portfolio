@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tema scuro forzato — nessun toggle chiaro/scuro. */
+:root {
+  --bg: 0 0% 4%;
+  --surface: 0 0% 8%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 53%;
+  --stroke: 0 0% 12%;
+  --accent: 0 0% 96%;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -22,16 +32,16 @@
   }
 
   body {
-    @apply bg-white text-neutral-700 antialiased;
+    @apply bg-bg text-text-primary antialiased font-body;
   }
 
   ::selection {
-    @apply bg-teal-300/50 text-neutral-900;
+    @apply bg-[#4E85BF]/40 text-text-primary;
   }
 
   /* Stato di focus visibile e coerente per navigazione da tastiera (WCAG 2.4.7) */
   :focus-visible {
-    @apply outline-none ring-2 ring-teal-500 ring-offset-2 ring-offset-white rounded-sm;
+    @apply outline-none ring-2 ring-[#89AACC] ring-offset-2 ring-offset-bg rounded-sm;
   }
 }
 
@@ -39,20 +49,30 @@
   /* Link "salta al contenuto" per utenti di screen reader / tastiera */
   .skip-link {
     @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100]
-      focus:rounded-lg focus:bg-teal-600 focus:px-4 focus:py-2 focus:text-white focus:shadow-lg;
+      focus:rounded-full focus:bg-text-primary focus:px-4 focus:py-2 focus:text-bg focus:shadow-lg;
   }
 
   .section-container {
     @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
   }
 
-  /* Card chiara standard: bordo sottile e ombra minima, coerente con la palette bianco + teal + nero */
+  /* Card scura standard: bordo sottile su superficie leggermente più chiara del fondo */
   .glass-card {
-    @apply rounded-2xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)];
+    @apply rounded-3xl border border-stroke bg-surface;
   }
 
-  /* Variante scura per superfici accento (CTA, footer) */
-  .dark-card {
-    @apply rounded-2xl border border-white/10 bg-neutral-900 text-white;
+  /* Bordo con gradiente animato, usato su hover di pulsanti/pill in stile "accent" */
+  .accent-gradient-border {
+    background: linear-gradient(90deg, #89aacc, #4e85bf, #89aacc);
+    background-size: 200% 200%;
+  }
+  .accent-gradient-border:hover {
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  /* Alone diffuso dietro elementi in evidenza (hero, video) */
+  .halftone-overlay {
+    background-image: radial-gradient(circle, #000 1px, transparent 1px);
+    background-size: 4px 4px;
   }
 }
