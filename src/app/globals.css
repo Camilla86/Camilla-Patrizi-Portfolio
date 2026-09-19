@@ -4,11 +4,11 @@
 
 /* Tema scuro forzato — nessun toggle chiaro/scuro. */
 :root {
-  --bg: 222 47% 6%;
-  --surface: 222 35% 11%;
+  --bg: 224 46% 8%;
+  --surface: 224 34% 13%;
   --text: 0 0% 96%;
-  --muted: 220 15% 60%;
-  --stroke: 222 25% 18%;
+  --muted: 222 16% 64%;
+  --stroke: 224 26% 20%;
   --accent: 0 0% 96%;
 }
 
