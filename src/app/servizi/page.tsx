@@ -27,7 +27,7 @@ const ICONS: Record<string, typeof Clapperboard> = {
 
 function ServiceIcon({ name }: { name: string }) {
   const Icon = ICONS[name] ?? Clapperboard;
-  return <Icon className="h-6 w-6 text-text-primary" aria-hidden="true" />;
+  return <Icon className="h-6 w-6 text-icon" aria-hidden="true" />;
 }
 
 function ServiceCard({ category }: { category: Category }) {
@@ -56,7 +56,7 @@ function ServiceCard({ category }: { category: Category }) {
           <ul className="mt-3 space-y-2">
             {category.deliverables.map((deliverable) => (
               <li key={deliverable} className="flex items-start gap-2.5 text-sm text-text-primary/90">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-text-primary" aria-hidden="true" />
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-icon" aria-hidden="true" />
                 {deliverable}
               </li>
             ))}
