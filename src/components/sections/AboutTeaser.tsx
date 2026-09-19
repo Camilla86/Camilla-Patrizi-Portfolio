@@ -22,6 +22,9 @@ export function AboutTeaser() {
           <h2 className="mt-3 font-display text-3xl italic tracking-tight text-text-primary sm:text-4xl">
             {siteConfig.name}
           </h2>
+          <p className="mt-3 text-sm font-medium text-icon">
+            Content &amp; Social Media Specialist con competenze AI, analisi e produzione visiva
+          </p>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted">
             Digital strategist specializzata in contenuti social, landing page e workflow potenziati dall&apos;AI.
             Aiuto brand e professionisti a trasformare analisi e idee in progetti digitali concreti e misurabili.
