@@ -127,24 +127,24 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
 
             <dl className="mt-6 space-y-3 text-sm text-muted">
               <div className="flex items-center gap-2.5">
-                <Building2 className="h-4 w-4 text-text-primary" aria-hidden="true" />
+                <Building2 className="h-4 w-4 text-icon" aria-hidden="true" />
                 <dt className="sr-only">Cliente</dt>
                 <dd>
                   {item.client} — {item.sector}
                 </dd>
               </div>
               <div className="flex items-center gap-2.5">
-                <CalendarDays className="h-4 w-4 text-text-primary" aria-hidden="true" />
+                <CalendarDays className="h-4 w-4 text-icon" aria-hidden="true" />
                 <dt className="sr-only">Data</dt>
                 <dd>{formatDate(item.date)}</dd>
               </div>
               <div className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 text-text-primary" aria-hidden="true" />
+                <Clock className="h-4 w-4 text-icon" aria-hidden="true" />
                 <dt className="sr-only">Durata</dt>
                 <dd>{item.duration}</dd>
               </div>
               <div className="flex items-start gap-2.5">
-                <Wrench className="mt-0.5 h-4 w-4 shrink-0 text-text-primary" aria-hidden="true" />
+                <Wrench className="mt-0.5 h-4 w-4 shrink-0 text-icon" aria-hidden="true" />
                 <dt className="sr-only">Strumenti</dt>
                 <dd>{item.tools.join(', ')}</dd>
               </div>
