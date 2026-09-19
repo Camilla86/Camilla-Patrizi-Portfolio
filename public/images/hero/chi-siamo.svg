@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#042F2E"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="25%" cy="15%" r="75%">
-      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#g)"/>
-  <rect width="800" height="600" fill="url(#glow)"/>
-  <circle cx="660" cy="470" r="170" fill="#14B8A6" opacity="0.10"/>
-  <circle cx="110" cy="110" r="110" fill="#ffffff" opacity="0.06"/>
-  <text x="40" y="500" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" opacity="0.95">Camilla Patrizi</text>
-  <text x="40" y="534" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#5EEAD4" opacity="0.85">Ritratto — placeholder</text>
-  <text x="40" y="562" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#ffffff" opacity="0.4">Placeholder — sostituisci con immagine reale</text>
-</svg>
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="g" x1="0" y1="0" x2="1" y2="1"&gt;
+      &lt;stop offset="0%" stop-color="#0F172A"/&gt;
+      &lt;stop offset="100%" stop-color="#0B2447"/&gt;
+    &lt;/linearGradient&gt;
+    &lt;radialGradient id="glow" cx="25%" cy="15%" r="75%"&gt;
+      &lt;stop offset="0%" stop-color="#4E85BF" stop-opacity="0.35"/&gt;
+      &lt;stop offset="100%" stop-color="#4E85BF" stop-opacity="0"/&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+  &lt;rect width="800" height="600" fill="url(#g)"/&gt;
+  &lt;rect width="800" height="600" fill="url(#glow)"/&gt;
+  &lt;circle cx="660" cy="470" r="170" fill="#3B6FA0" opacity="0.10"/&gt;
+  &lt;circle cx="110" cy="110" r="110" fill="#ffffff" opacity="0.06"/&gt;
+  &lt;text x="40" y="500" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" opacity="0.95"&gt;Camilla Patrizi&lt;/text&gt;
+  &lt;text x="40" y="534" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#89AACC" opacity="0.85"&gt;Ritratto — placeholder&lt;/text&gt;
+  &lt;text x="40" y="562" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#ffffff" opacity="0.4"&gt;Placeholder — sostituisci con immagine reale&lt;/text&gt;
+&lt;/svg&gt;
