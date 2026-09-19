@@ -30,7 +30,7 @@ export default function ContactPage() {
               href={`mailto:${siteConfig.email}`}
               className="flex items-center gap-2.5 transition-colors hover:text-muted"
             >
-              <Mail className="h-4 w-4" aria-hidden="true" />
+              <Mail className="h-4 w-4 text-icon" aria-hidden="true" />
               {siteConfig.email}
             </a>
             <a
@@ -39,7 +39,7 @@ export default function ContactPage() {
               rel="noreferrer noopener"
               className="flex items-center gap-2.5 transition-colors hover:text-muted"
             >
-              <Linkedin className="h-4 w-4" aria-hidden="true" />
+              <Linkedin className="h-4 w-4 text-icon" aria-hidden="true" />
               LinkedIn
             </a>
             <a
@@ -48,7 +48,7 @@ export default function ContactPage() {
               rel="noreferrer noopener"
               className="flex items-center gap-2.5 transition-colors hover:text-muted"
             >
-              <Instagram className="h-4 w-4" aria-hidden="true" />
+              <Instagram className="h-4 w-4 text-icon" aria-hidden="true" />
               Instagram
             </a>
           </div>
