@@ -13,7 +13,4 @@
   <rect width="800" height="600" fill="url(#glow)"/>
   <circle cx="660" cy="470" r="170" fill="#3B6FA0" opacity="0.10"/>
   <circle cx="110" cy="110" r="110" fill="#ffffff" opacity="0.06"/>
-  <text x="40" y="500" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" opacity="0.95">Landing Page</text>
-  <text x="40" y="534" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#89AACC" opacity="0.85">Design e sviluppo orientato alla conversione</text>
-  <text x="40" y="562" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#ffffff" opacity="0.4">Placeholder — sostituisci con immagine reale</text>
 </svg>
