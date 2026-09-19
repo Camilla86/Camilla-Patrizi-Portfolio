@@ -11,6 +11,7 @@ const config: Config = {
         muted: 'hsl(var(--muted))',
         stroke: 'hsl(var(--stroke))',
         accent: 'hsl(var(--accent))',
+        icon: 'hsl(var(--icon))',
       },
       fontFamily: {
         body: ['var(--font-inter)', 'Inter', 'sans-serif'],
