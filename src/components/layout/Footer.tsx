@@ -72,7 +72,7 @@ export function Footer() {
               aria-label={`${siteConfig.name} su Instagram`}
               className="text-muted transition-colors hover:text-text-primary"
             >
-              <Instagram className="h-4 w-4" aria-hidden="true" />
+              <Instagram className="h-4 w-4 text-icon" aria-hidden="true" />
             </a>
             <a
               href={siteConfig.social.youtube}
@@ -81,7 +81,7 @@ export function Footer() {
               aria-label={`${siteConfig.name} su YouTube`}
               className="text-muted transition-colors hover:text-text-primary"
             >
-              <Youtube className="h-4 w-4" aria-hidden="true" />
+              <Youtube className="h-4 w-4 text-icon" aria-hidden="true" />
             </a>
             <a
               href={siteConfig.social.tiktok}
@@ -90,7 +90,7 @@ export function Footer() {
               aria-label={`${siteConfig.name} su TikTok`}
               className="text-muted transition-colors hover:text-text-primary"
             >
-              <Music2 className="h-4 w-4" aria-hidden="true" />
+              <Music2 className="h-4 w-4 text-icon" aria-hidden="true" />
             </a>
             <a
               href={siteConfig.social.linkedin}
@@ -99,7 +99,7 @@ export function Footer() {
               aria-label={`${siteConfig.name} su LinkedIn`}
               className="text-muted transition-colors hover:text-text-primary"
             >
-              <Linkedin className="h-4 w-4" aria-hidden="true" />
+              <Linkedin className="h-4 w-4 text-icon" aria-hidden="true" />
             </a>
           </div>
 
