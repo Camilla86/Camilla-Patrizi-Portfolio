@@ -198,6 +198,9 @@ export const portfolioItems: PortfolioItem[] = [
   },
 ];
 
+/** Slug dei progetti che hanno una pagina dedicata in src/app/portfolio/<slug> invece del template [slug]. */
+export const customPageSlugs: string[] = ['borsa-3in1'];
+
 export function getPortfolioItemBySlug(slug: string): PortfolioItem | undefined {
   return portfolioItems.find((item) => item.slug === slug);
 }

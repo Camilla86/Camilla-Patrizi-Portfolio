@@ -30,7 +30,7 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <div>
-      <div className="section-container py-16">
+      <div className="section-container pb-16 pt-32">
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Chi sono' }]} />
 
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">

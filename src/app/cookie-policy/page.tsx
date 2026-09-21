@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function CookiePolicyPage() {
   return (
-    <div className="section-container py-16">
+    <div className="section-container pb-16 pt-32">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Cookie Policy' }]} />
 
       <div className="prose prose-invert max-w-3xl prose-headings:font-display prose-headings:italic prose-headings:tracking-tight prose-headings:text-text-primary prose-p:text-muted prose-a:text-text-primary">

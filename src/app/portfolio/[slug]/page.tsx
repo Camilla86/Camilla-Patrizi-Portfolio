@@ -7,13 +7,19 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { RelatedPortfolio } from '@/components/portfolio/RelatedPortfolio';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { getPortfolioItemBySlug, getRelatedPortfolioItems, portfolioItems } from '@/content/portfolio';
+import {
+  customPageSlugs,
+  getPortfolioItemBySlug,
+  getRelatedPortfolioItems,
+  portfolioItems,
+} from '@/content/portfolio';
 import { getCategoryBySlug } from '@/content/categories';
 import { buildMetadata, breadcrumbJsonLd, portfolioItemJsonLd } from '@/lib/seo';
 import { formatDate, mediaTypeLabel } from '@/lib/utils';
 
 export function generateStaticParams() {
-  return portfolioItems.map((item) => ({ slug: item.slug }));
+  // I progetti con pagina dedicata (es. src/app/portfolio/borsa-3in1) non usano questo template.
+  return portfolioItems.filter((item) => !customPageSlugs.includes(item.slug)).map((item) => ({ slug: item.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
@@ -46,7 +52,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
     <div>
       <JsonLd data={[portfolioItemJsonLd(item), breadcrumbJsonLd(breadcrumbItems)]} />
 
-      <div className="section-container py-16">
+      <div className="section-container pb-16 pt-32">
         <Breadcrumb items={breadcrumbItems} />
 
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">

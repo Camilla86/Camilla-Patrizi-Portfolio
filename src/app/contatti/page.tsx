@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function ContactPage() {
   return (
-    <div className="section-container py-16">
+    <div className="section-container pb-16 pt-32">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contatti' }]} />
 
       <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">

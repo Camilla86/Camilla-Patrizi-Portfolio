@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function PortfolioPage() {
   return (
-    <div className="section-container py-16">
+    <div className="section-container pb-16 pt-32">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Portfolio' }]} />
 
       <h1 className="font-display text-3xl italic tracking-tight text-text-primary sm:text-4xl">Portfolio</h1>
