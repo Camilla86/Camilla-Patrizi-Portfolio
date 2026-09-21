@@ -4,6 +4,36 @@ import type { PortfolioItem } from '@/types';
 // con i contenuti reali prima della messa online (vedi README).
 export const portfolioItems: PortfolioItem[] = [
   {
+    // Il dettaglio di questo progetto è la landing stessa: src/app/portfolio/borsa-3in1/page.tsx
+    // (la rotta statica ha la precedenza su portfolio/[slug]).
+    slug: 'borsa-3in1',
+    title: 'Landing Page — Lancio borsa 3 in 1 MooBag',
+    excerpt: 'Landing page di lancio per una borsa fasciatoio che diventa lettino portatile, con offerta a tempo limitato.',
+    challenge:
+      'Lanciare un prodotto nuovo e poco noto, una borsa che è insieme fasciatoio e lettino, spiegandone in pochi secondi i tre usi e spingendo all\'acquisto durante il periodo di lancio.',
+    approach:
+      'Ho costruito una pagina in 5 blocchi: hero con promessa e CTA, tre punti di forza con immagini lifestyle, recensioni, offerta con conto alla rovescia e chiamata all\'azione finale. Design mobile-first con barra di acquisto fissa su smartphone.',
+    results: [
+      { label: 'Sezioni della pagina', value: '5' },
+      { label: 'Approccio', value: 'Mobile-first' },
+      { label: 'Offerta di lancio', value: 'Con timer a scadenza' },
+    ],
+    categorySlug: 'landing-page',
+    mediaType: 'landing',
+    client: 'Lancio prodotto MooBag',
+    sector: 'Puericultura & E-commerce',
+    tools: ['Next.js', 'React', 'CSS'],
+    coverImage: '/images/borsa-3in1/bag-baby-park.webp',
+    gallery: [
+      '/images/borsa-3in1/bag-baby-park.webp',
+      '/images/borsa-3in1/bag-beach-changing.webp',
+      '/images/borsa-3in1/bag-interior-straps.webp',
+    ],
+    tags: ['landing page', 'lancio prodotto', 'conversione'],
+    date: '2026-09-21',
+    duration: 'Su misura',
+  },
+  {
     slug: 'serie-reel-lancio-aurora-skincare',
     title: 'Serie Reel di lancio — Aurora Skincare',
     excerpt: 'Una serie di 6 Reel verticali per il lancio di una nuova linea skincare, pensati per il mobile-first.',
