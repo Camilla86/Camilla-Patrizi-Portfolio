@@ -119,8 +119,8 @@ contengono **placeholder SVG** al posto di foto/screenshot reali. Prima della me
 
 - Le rotte `/blog`, `/faq`, `/categorie` e `/chi-siamo` non fanno più parte della navigazione principale (non
   richieste dal progetto attuale): restano come **redirect permanenti** verso le pagine corrispondenti, per non
-  rompere eventuali link esterni già indicizzati. I relativi contenuti sorgente restano nel repository come
-  riferimento ma non sono collegati da nessuna pagina.
+  rompere eventuali link esterni già indicizzati. I contenuti sorgente del vecchio blog/FAQ, ormai non più
+  collegati da nessuna pagina, sono stati rimossi dal repository.
 - La navigazione per categoria è integrata nei filtri della pagina `/portfolio` (`?categoria=slug`).
 
 ## Deploy
