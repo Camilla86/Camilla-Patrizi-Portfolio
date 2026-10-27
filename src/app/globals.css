@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tema scuro forzato — nessun toggle chiaro/scuro. */
+/* Tema chiaro forzato — palette bianco + teal + nero, nessun toggle chiaro/scuro. */
 :root {
-  --bg: 224 46% 8%;
-  --surface: 224 34% 13%;
-  --text: 0 0% 96%;
-  --muted: 222 16% 64%;
-  --stroke: 224 26% 20%;
-  --accent: 0 0% 96%;
-  --icon: 210 45% 62%;
+  --bg: 0 0% 100%;
+  --surface: 173 20% 97%;
+  --text: 222 20% 9%;
+  --muted: 220 9% 40%;
+  --stroke: 220 14% 90%;
+  --accent: 175 75% 31%;
+  --icon: 173 75% 36%;
 }
 
 @layer base {
@@ -37,12 +37,12 @@
   }
 
   ::selection {
-    @apply bg-[#4E85BF]/40 text-text-primary;
+    @apply bg-[#14B8A6]/30 text-text-primary;
   }
 
   /* Stato di focus visibile e coerente per navigazione da tastiera (WCAG 2.4.7) */
   :focus-visible {
-    @apply outline-none ring-2 ring-[#89AACC] ring-offset-2 ring-offset-bg rounded-sm;
+    @apply outline-none ring-2 ring-[#0D9488] ring-offset-2 ring-offset-bg rounded-sm;
   }
 }
 
@@ -64,7 +64,7 @@
 
   /* Bordo con gradiente animato, usato su hover di pulsanti/pill in stile "accent" */
   .accent-gradient-border {
-    background: linear-gradient(90deg, #89aacc, #4e85bf, #89aacc);
+    background: linear-gradient(90deg, #2dd4bf, #0d9488, #2dd4bf);
     background-size: 200% 200%;
   }
   .accent-gradient-border:hover {

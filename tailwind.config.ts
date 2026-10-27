@@ -18,8 +18,8 @@ const config: Config = {
         display: ['var(--font-instrument-serif)', 'Instrument Serif', 'serif'],
       },
       backgroundImage: {
-        'accent-gradient': 'linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)',
-        'accent-gradient-reverse': 'linear-gradient(90deg, #4E85BF 0%, #89AACC 100%)',
+        'accent-gradient': 'linear-gradient(90deg, #2DD4BF 0%, #0D9488 100%)',
+        'accent-gradient-reverse': 'linear-gradient(90deg, #0D9488 0%, #2DD4BF 100%)',
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out forwards',

@@ -31,8 +31,8 @@ export function Header() {
     <header className="fixed left-0 right-0 top-0 z-50 flex justify-center px-4 pt-4 md:pt-6">
       <div
         className={cn(
-          'inline-flex items-center rounded-full border border-white/10 bg-surface/90 px-2 py-2 backdrop-blur-md transition-shadow duration-300',
-          scrolled && 'shadow-md shadow-black/20'
+          'inline-flex items-center rounded-full border border-stroke bg-surface/90 px-2 py-2 backdrop-blur-md transition-shadow duration-300',
+          scrolled && 'shadow-md shadow-black/10'
         )}
       >
         <Link href="/" aria-label={`${siteConfig.name} — Home`} className="group shrink-0">

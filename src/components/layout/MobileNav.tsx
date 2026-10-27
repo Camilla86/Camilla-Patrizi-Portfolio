@@ -32,7 +32,7 @@ export function MobileNav({ items }: MobileNavProps) {
       {isOpen && (
         <div
           id="mobile-nav-panel"
-          className="fixed inset-x-4 top-20 z-40 rounded-3xl border border-white/10 bg-surface/95 backdrop-blur-xl"
+          className="fixed inset-x-4 top-20 z-40 rounded-3xl border border-stroke bg-surface/95 shadow-lg shadow-black/5 backdrop-blur-xl"
         >
           <nav aria-label="Navigazione principale (mobile)" className="flex flex-col gap-1 p-3">
             {items.map((item) => (
