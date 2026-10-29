@@ -33,6 +33,8 @@ export interface PortfolioItem {
   coverImage: string;
   gallery: string[];
   videoUrl?: string;
+  /** Pagina online del progetto (es. una landing statica in /public), mostrata come link nel case study. */
+  liveUrl?: string;
   tags: string[];
   date: string; // ISO 8601
   duration: string;

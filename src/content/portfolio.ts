@@ -4,6 +4,35 @@ import type { PortfolioItem } from '@/types';
 // con i contenuti reali prima della messa online (vedi README).
 export const portfolioItems: PortfolioItem[] = [
   {
+    // La landing è un file statico: public/sciarpa-cachemire-personalizzata/index.html
+    slug: 'sciarpa-cachemire-personalizzata',
+    title: 'Landing Page — Sciarpa Cachemire Personalizzata',
+    excerpt: 'Landing page prodotto per una sciarpa in cachemire personalizzabile con iniziali o monogramma, con anteprima della personalizzazione.',
+    challenge:
+      'Presentare un accessorio premium personalizzabile con un tono elegante e sobrio, portare l\'utente verso la personalizzazione senza forzature e collegare la pagina al servizio di personalizzazione e ai prodotti correlati, senza claim non verificabili.',
+    approach:
+      'Ho costruito una pagina editoriale mobile-first: hero con CTA, cinque punti di valore, galleria prodotto, varianti con anteprima di colore e iniziali, blocco di compatibilità con link interno al servizio, occasioni d\'uso, cross-sell, FAQ e CTA finale. SEO on-page con title, meta description e dati strutturati Product e FAQ.',
+    results: [
+      { label: 'Sezioni della pagina', value: '9' },
+      { label: 'Approccio', value: 'Mobile-first' },
+      { label: 'Dati strutturati', value: 'Product + FAQ' },
+    ],
+    categorySlug: 'landing-page',
+    mediaType: 'landing',
+    client: 'Brand di maglieria in cachemire',
+    sector: 'Moda & E-commerce',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Schema.org'],
+    coverImage: '/images/portfolio/sciarpa-cachemire-personalizzata-1.jpg',
+    gallery: [
+      '/images/portfolio/sciarpa-cachemire-personalizzata-1.jpg',
+      '/images/portfolio/sciarpa-cachemire-personalizzata-2.jpg',
+    ],
+    liveUrl: '/sciarpa-cachemire-personalizzata/',
+    tags: ['landing page', 'e-commerce', 'SEO on-page'],
+    date: '2026-10-29',
+    duration: 'Su misura',
+  },
+  {
     // Il dettaglio di questo progetto è la landing stessa: src/app/portfolio/borsa-3in1/page.tsx
     // (la rotta statica ha la precedenza su portfolio/[slug]).
     slug: 'borsa-3in1',

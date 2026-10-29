@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { Play, Building2, CalendarDays, Clock, Wrench } from 'lucide-react';
+import { Play, Building2, CalendarDays, Clock, Wrench, ArrowUpRight } from 'lucide-react';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -161,6 +161,19 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
                 <Badge key={tag}>{tag}</Badge>
               ))}
             </div>
+
+            {item.liveUrl && (
+              // <a> e non <Link>: la pagina è un file statico in /public, fuori dal router di Next.
+              <a
+                href={item.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-base font-medium text-text-primary underline decoration-stroke underline-offset-4 transition-colors hover:decoration-text-primary"
+              >
+                Vedi la landing online
+                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+            )}
 
             <div className="mt-9">
               <Button href={`/contatti?rif=${item.slug}`} size="lg">
