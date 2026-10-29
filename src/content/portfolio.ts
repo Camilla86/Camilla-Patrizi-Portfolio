@@ -22,9 +22,9 @@ export const portfolioItems: PortfolioItem[] = [
     client: 'Brand di maglieria in cachemire',
     sector: 'Moda & E-commerce',
     tools: ['HTML', 'CSS', 'JavaScript', 'Schema.org'],
-    coverImage: '/images/portfolio/sciarpa-cachemire-personalizzata-1.jpg',
+    coverImage: '/images/portfolio/sciarpa-cachemire-personalizzata-.jpg',
     gallery: [
-      '/images/portfolio/sciarpa-cachemire-personalizzata-1.jpg',
+      '/images/portfolio/sciarpa-cachemire-personalizzata-.jpg',
       '/images/portfolio/sciarpa-cachemire-personalizzata-2.jpg',
     ],
     liveUrl: '/sciarpa-cachemire-personalizzata/',
