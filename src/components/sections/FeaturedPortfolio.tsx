@@ -10,7 +10,7 @@ import { mediaTypeLabel } from '@/lib/utils';
 
 const FEATURED: { slug: string; size: BentoSize }[] = [
   { slug: 'workflow-ai-produzione-contenuti-editoriali', size: 'lg' },
-  { slug: 'landing-page-corso-fotografia-digitale', size: 'wide' },
+  { slug: 'sciarpa-cachemire-personalizzata', size: 'wide' },
   { slug: 'serie-reel-lancio-aurora-skincare', size: 'tall' },
   { slug: 'analisi-competitor-brand-abbigliamento-sostenibile', size: 'sm' },
   { slug: 'mini-app-calcolo-preventivi-fotografia', size: 'sm' },
