@@ -119,7 +119,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     slug: 'analisi-competitor-brand-abbigliamento-sostenibile',
-    title: 'Analisi Competitor — Brand di abbigliamento sostenibile',
+    title: 'Strategia digital marketing',
     excerpt: 'Mappatura di 8 competitor diretti per orientare la strategia digitale di un brand emergente.',
     challenge:
       'Un brand emergente di moda sostenibile non aveva una visione chiara di come si posizionavano i competitor sui canali digitali, rischiando di duplicare contenuti già presidiati dal mercato.',
@@ -173,7 +173,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     slug: 'workflow-ai-produzione-contenuti-editoriali',
-    title: 'Workflow AI — Produzione contenuti editoriali',
+    title: 'Insegnante di contenuti',
     excerpt: 'Un workflow integrato con strumenti AI per dimezzare i tempi di produzione dei contenuti editoriali.',
     challenge:
       'Un piccolo team editoriale impiegava troppo tempo a passare manualmente da bozza testuale a contenuto pubblicato su più canali (blog, newsletter, social), con continui colli di bottiglia.',
@@ -200,7 +200,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     slug: 'mini-app-calcolo-preventivi-fotografia',
-    title: 'Mini App — Calcolo preventivi per servizi fotografici',
+    title: 'Modelle AI',
     excerpt: 'Un piccolo strumento web che genera preventivi personalizzati in tempo reale per i clienti.',
     challenge:
       'I clienti chiedevano spesso preventivi personalizzati via email, con tempi di risposta lenti e un processo ripetitivo per chi doveva calcolarli manualmente ogni volta.',
