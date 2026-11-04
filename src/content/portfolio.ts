@@ -64,7 +64,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     slug: 'serie-reel-lancio-aurora-skincare',
-    title: 'Serie Reel di lancio — Aurora Skincare',
+    title: 'Creazione contenuti digitali',
     excerpt: 'Una serie di 6 Reel verticali per il lancio di una nuova linea skincare, pensati per il mobile-first.',
     challenge:
       'Aurora Skincare doveva lanciare una nuova linea prodotto senza budget per uno spot tradizionale, puntando tutto sui social. Serviva un contenuto in grado di generare attenzione nei primi 2 secondi e spingere al salvataggio del profilo.',
