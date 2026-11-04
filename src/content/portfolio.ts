@@ -180,10 +180,8 @@ export const portfolioItems: PortfolioItem[] = [
     slug: 'workflow-ai-produzione-contenuti-editoriali',
     title: 'Insegnante di contenuti',
     excerpt: 'Un workflow integrato con strumenti AI per dimezzare i tempi di produzione dei contenuti editoriali.',
-    challenge:
-      'Un piccolo team editoriale impiegava troppo tempo a passare manualmente da bozza testuale a contenuto pubblicato su più canali (blog, newsletter, social), con continui colli di bottiglia.',
-    approach:
-      'Ho progettato un workflow che collega generazione assistita da AI, revisione umana e pubblicazione multicanale, con checkpoint di controllo qualità in ogni fase. Il team ha ricevuto formazione e documentazione per gestire il workflow in autonomia.',
+    challenge: 'Progettazione Strategica di Content Didattico & Schede Gioco',
+    approach: 'Format Didattici Interattivi: Imparare Giocando',
     results: [
       { label: 'Tempo di produzione', value: '-52%' },
       { label: 'Contenuti pubblicati/mese', value: 'da 8 a 18' },
