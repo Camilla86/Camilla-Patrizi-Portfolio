@@ -43,7 +43,9 @@ export function FeaturedPortfolio() {
                   alt={item.title}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`transition-transform duration-500 group-hover:scale-105 ${
+                    item.slug === 'serie-reel-lancio-aurora-skincare' ? 'object-contain' : 'object-cover'
+                  }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
 
