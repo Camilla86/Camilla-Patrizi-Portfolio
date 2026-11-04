@@ -180,8 +180,10 @@ export const portfolioItems: PortfolioItem[] = [
     slug: 'workflow-ai-produzione-contenuti-editoriali',
     title: 'Insegnante di contenuti',
     excerpt: 'Un workflow integrato con strumenti AI per dimezzare i tempi di produzione dei contenuti editoriali.',
-    challenge: 'Progettazione Strategica di Content Didattico & Schede Gioco',
-    approach: 'Format Didattici Interattivi: Imparare Giocando',
+    challenge:
+      'L\'obiettivo pedagogico era aumentare l\'attenzione e la retention dei concetti chiave per un target di scuola primaria, supportando anche il lavoro di docenti e genitori nello studio a casa. Le schede didattiche tradizionali, passive e poco coinvolgenti, non bastavano più a tenere viva l\'attenzione.',
+    approach:
+      'Ho sviluppato Format Didattici Interattivi: Imparare Giocando — Progettazione Strategica di Content Didattico & Schede Gioco, trasformando argomenti come storia e scienze in percorsi di gioco con domande, sfide e ricompense. Il formato a gioco funziona meglio della solita scheda passiva perché richiede un ruolo attivo: per avanzare bisogna ricordare e applicare l\'informazione, rinforzando la memorizzazione invece di limitarsi a leggerla una volta.',
     results: [
       { label: 'Tempo di produzione', value: '-52%' },
       { label: 'Contenuti pubblicati/mese', value: 'da 8 a 18' },
