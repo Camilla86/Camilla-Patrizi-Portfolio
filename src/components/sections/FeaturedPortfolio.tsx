@@ -8,6 +8,9 @@ import { SectionHeader } from '@/components/sections/SectionHeader';
 import { getPortfolioItemBySlug } from '@/content/portfolio';
 import { mediaTypeLabel } from '@/lib/utils';
 
+// Slug dei progetti la cui copertina va mostrata intera (senza ritaglio), perché contiene testo/dettagli importanti.
+const SHOW_FULL_IMAGE_SLUGS = ['serie-reel-lancio-aurora-skincare', 'workflow-ai-produzione-contenuti-editoriali'];
+
 const FEATURED: { slug: string; size: BentoSize }[] = [
   { slug: 'workflow-ai-produzione-contenuti-editoriali', size: 'lg' },
   { slug: 'sciarpa-cachemire-personalizzata', size: 'wide' },
@@ -44,7 +47,7 @@ export function FeaturedPortfolio() {
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className={`transition-transform duration-500 group-hover:scale-105 ${
-                    item.slug === 'serie-reel-lancio-aurora-skincare' ? 'object-contain' : 'object-cover'
+                    SHOW_FULL_IMAGE_SLUGS.includes(item.slug) ? 'object-contain' : 'object-cover'
                   }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
