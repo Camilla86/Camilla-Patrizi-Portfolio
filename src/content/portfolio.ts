@@ -194,10 +194,10 @@ export const portfolioItems: PortfolioItem[] = [
     client: 'Redazione editoriale indipendente',
     sector: 'Editoria digitale',
     tools: ['Claude', 'Zapier', 'Notion'],
-    coverImage: '/images/portfolio/workflow-ai-produzione-contenuti-editoriali-1.svg',
+    coverImage: '/images/portfolio/La%20Rivoluzione%20Francese_%20Gioco%20Storico.png',
     gallery: [
-      '/images/portfolio/workflow-ai-produzione-contenuti-editoriali-1.svg',
-      '/images/portfolio/workflow-ai-produzione-contenuti-editoriali-2.svg',
+      '/images/portfolio/La%20Rivoluzione%20Francese_%20Gioco%20Storico.png',
+      '/images/portfolio/Infografica%20educativa%20sulla%20fotosintesi.png',
     ],
     tags: ['workflow', 'automazione', 'intelligenza artificiale'],
     date: '2025-12-10',
