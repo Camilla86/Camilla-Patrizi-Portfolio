@@ -179,7 +179,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     slug: 'workflow-ai-produzione-contenuti-editoriali',
     title: 'Insegnante di contenuti',
-    excerpt: 'Un workflow integrato con strumenti AI per dimezzare i tempi di produzione dei contenuti editoriali.',
+    excerpt: 'Progettazione Strategica di Content Didattico & Schede Gioco — Format Didattici Interattivi: Imparare Giocando.',
     challenge:
       'L\'obiettivo pedagogico era aumentare l\'attenzione e la retention dei concetti chiave per un target di scuola primaria, supportando anche il lavoro di docenti e genitori nello studio a casa. Le schede didattiche tradizionali, passive e poco coinvolgenti, non bastavano più a tenere viva l\'attenzione.',
     approach:
