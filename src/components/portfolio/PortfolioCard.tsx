@@ -5,6 +5,9 @@ import { Badge } from '@/components/ui/Badge';
 import type { PortfolioItem } from '@/types';
 import { mediaTypeLabel } from '@/lib/utils';
 
+// Slug dei progetti la cui copertina va mostrata intera (senza ritaglio), perché contiene testo/dettagli importanti.
+const SHOW_FULL_IMAGE_SLUGS = ['serie-reel-lancio-aurora-skincare', 'workflow-ai-produzione-contenuti-editoriali'];
+
 interface PortfolioCardProps {
   item: PortfolioItem;
   priority?: boolean;
@@ -24,7 +27,9 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
           fill
           priority={priority}
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`transition-transform duration-500 group-hover:scale-105 ${
+            SHOW_FULL_IMAGE_SLUGS.includes(item.slug) ? 'object-contain' : 'object-cover'
+          }`}
         />
         {item.mediaType === 'video' && (
           <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 backdrop-blur">
