@@ -7,14 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/content/site';
 
 // Le parole ciclano nella frase "Trasformo idee in {parola}." — legate ai servizi reali.
-const ROLE_WORDS = [
-  'video che convertono',
-  'landing page efficaci',
-  'analisi utili',
-  'workflow più veloci',
-  'foto',
-  'contenuti digitali',
-];
+const ROLE_WORDS = ['landing page efficaci', 'workflow più veloci', 'foto', 'contenuti digitali'];
 
 /** Hero cinematico: nome in grande, frase con parola rotante, CTA, sfondo con gradiente animato. */
 export function Hero() {
