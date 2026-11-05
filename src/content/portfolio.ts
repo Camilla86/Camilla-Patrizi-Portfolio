@@ -191,9 +191,9 @@ export const portfolioItems: PortfolioItem[] = [
     ],
     categorySlug: 'workflow-ai',
     mediaType: 'workflow',
-    client: 'Redazione editoriale indipendente',
-    sector: 'Editoria digitale',
-    tools: ['Claude', 'Zapier', 'Notion'],
+    client: 'Docenti e genitori',
+    sector: 'Formazione e didattica',
+    tools: ['Canva', 'Claude', 'Google Slides'],
     coverImage: '/images/portfolio/La%20Rivoluzione%20Francese_%20Gioco%20Storico.png',
     gallery: [
       '/images/portfolio/La%20Rivoluzione%20Francese_%20Gioco%20Storico.png',
