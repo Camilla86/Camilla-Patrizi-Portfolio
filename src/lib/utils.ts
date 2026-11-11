@@ -18,7 +18,7 @@ export function formatDate(iso: string) {
 const MEDIA_TYPE_LABELS: Record<string, string> = {
   video: 'Video social',
   landing: 'Landing page',
-  analisi: 'Analisi',
+  analisi: 'Brand strategy',
   workflow: 'Workflow AI',
   app: 'Mini app',
 };
