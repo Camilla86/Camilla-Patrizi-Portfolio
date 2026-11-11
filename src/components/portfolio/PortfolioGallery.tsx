@@ -28,6 +28,22 @@ export function PortfolioGallery({ item, showFullImage }: PortfolioGalleryProps)
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [openIndex]);
 
+  // Blocca lo scroll della pagina sotto: su alcuni browser mobile (es. in-app di WhatsApp/Instagram)
+  // "position: fixed" si disallinea se la pagina sottostante resta scorrevole, rendendo il pulsante
+  // di chiusura non cliccabile nella posizione in cui appare visivamente.
+  useEffect(() => {
+    if (openIndex === null) return;
+    const html = document.documentElement;
+    const { overflow: htmlOverflow } = html.style;
+    const { overflow: bodyOverflow } = document.body.style;
+    html.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    return () => {
+      html.style.overflow = htmlOverflow;
+      document.body.style.overflow = bodyOverflow;
+    };
+  }, [openIndex]);
+
   const imageClassName = `transition-transform duration-300 group-hover:scale-105 ${
     showFullImage ? 'object-contain' : 'object-cover'
   }`;
@@ -48,7 +64,7 @@ export function PortfolioGallery({ item, showFullImage }: PortfolioGalleryProps)
       >
         <X className="h-5 w-5" aria-hidden="true" />
       </button>
-      <div className="relative h-[85vh] w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+      <div className="relative h-[85vh] w-full max-w-5xl">
         <Image
           src={images[openIndex]}
           alt={`${item.title} — immagine ingrandita`}
