@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { Play, Building2, CalendarDays, Clock, Wrench, ArrowUpRight } from 'lucide-react';
+import { Building2, CalendarDays, Clock, Wrench, ArrowUpRight } from 'lucide-react';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { RelatedPortfolio } from '@/components/portfolio/RelatedPortfolio';
+import { PortfolioGallery } from '@/components/portfolio/PortfolioGallery';
 import { JsonLd } from '@/components/seo/JsonLd';
 import {
   customPageSlugs,
@@ -60,48 +60,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
 
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-stroke">
-              <Image
-                src={item.coverImage}
-                alt={item.title}
-                fill
-                priority
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className={SHOW_FULL_IMAGE_SLUGS.includes(item.slug) ? 'object-contain' : 'object-cover'}
-              />
-              {item.mediaType === 'video' && (
-                <span className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur">
-                    <Play className="h-6 w-6 text-white" aria-hidden="true" />
-                  </span>
-                </span>
-              )}
-            </div>
-
-            {item.mediaType === 'video' && (
-              <p className="mt-3 text-xs text-muted">
-                Anteprima placeholder: sostituisci con il file video reale in <code>/public/videos</code>.
-              </p>
-            )}
-
-            {item.gallery.length > 1 && (
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                {item.gallery.slice(1).map((src) => (
-                  <div
-                    key={src}
-                    className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-stroke"
-                  >
-                    <Image
-                      src={src}
-                      alt={`${item.title} — immagine aggiuntiva`}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, 50vw"
-                      className={SHOW_FULL_IMAGE_SLUGS.includes(item.slug) ? 'object-contain' : 'object-cover'}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
+            <PortfolioGallery item={item} showFullImage={SHOW_FULL_IMAGE_SLUGS.includes(item.slug)} />
 
             {/* Case study: sfida, approccio e risultati del progetto */}
             <div className="mt-10 space-y-8">
