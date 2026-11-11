@@ -68,6 +68,9 @@ export function FeaturedPortfolio() {
                       {mediaTypeLabel(item.mediaType)}
                     </Badge>
                     <p className="font-display text-lg italic leading-tight text-white">{item.title}</p>
+                    {item.slug === 'analisi-competitor-brand-abbigliamento-sostenibile' && (
+                      <p className="mt-1 text-xs uppercase tracking-wide text-white/70">Brand strategy</p>
+                    )}
                   </div>
                   <ArrowUpRight
                     className="h-5 w-5 shrink-0 text-white/70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

@@ -45,6 +45,9 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
       <div className="p-5">
         <Badge>{mediaTypeLabel(item.mediaType)}</Badge>
         <h3 className="mt-3 font-display text-lg italic leading-snug text-text-primary">{item.title}</h3>
+        {item.slug === 'analisi-competitor-brand-abbigliamento-sostenibile' && (
+          <p className="mt-1 text-xs uppercase tracking-wide text-icon">Brand strategy</p>
+        )}
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{item.excerpt}</p>
       </div>
     </Link>
