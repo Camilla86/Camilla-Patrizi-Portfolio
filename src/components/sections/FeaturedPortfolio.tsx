@@ -16,10 +16,10 @@ const SHOW_FULL_IMAGE_SLUGS = [
 ];
 
 const FEATURED: { slug: string; size: BentoSize }[] = [
-  { slug: 'workflow-ai-produzione-contenuti-editoriali', size: 'lg' },
+  { slug: 'analisi-competitor-brand-abbigliamento-sostenibile', size: 'lg' },
   { slug: 'sciarpa-cachemire-personalizzata', size: 'wide' },
   { slug: 'serie-reel-lancio-aurora-skincare', size: 'tall' },
-  { slug: 'analisi-competitor-brand-abbigliamento-sostenibile', size: 'sm' },
+  { slug: 'workflow-ai-produzione-contenuti-editoriali', size: 'sm' },
   { slug: 'mini-app-calcolo-preventivi-fotografia', size: 'sm' },
   { slug: 'analisi-digitale-studio-professionale', size: 'wide' },
 ];
