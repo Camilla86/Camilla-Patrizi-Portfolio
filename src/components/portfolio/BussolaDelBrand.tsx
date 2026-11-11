@@ -207,7 +207,7 @@ export function BussolaDelBrand() {
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted">
           Dalle risposte a queste otto aree nasce la piattaforma di brand completa: scopo, missione, visione,
           valori, promessa, posizionamento, target e tono di voce — pronta per guidare ogni scelta di comunicazione
-          successiva.
+          successiva, inclusi i contenuti pubblicati sui diversi canali social.
         </p>
 
         <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-stroke px-4 py-2 text-sm text-muted">
