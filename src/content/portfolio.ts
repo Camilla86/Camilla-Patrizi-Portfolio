@@ -124,28 +124,26 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     slug: 'analisi-competitor-brand-abbigliamento-sostenibile',
-    title: 'Strategia digital marketing',
-    excerpt: 'Mappatura di 8 competitor diretti per orientare la strategia digitale di un brand emergente.',
+    title: 'Bussola del Brand',
+    excerpt:
+      'Framework di domande strategiche per un workshop di branding: dalla domanda di partenza alla piattaforma di brand completa.',
     challenge:
-      'Un brand emergente di moda sostenibile non aveva una visione chiara di come si posizionavano i competitor sui canali digitali, rischiando di duplicare contenuti già presidiati dal mercato.',
+      "Un brand con un'identità ambigua (vegano ma anche pesce, bio generico ma senza una vera distinzione) rischiava di non convincere nessuno pienamente, prima ancora di scrivere qualsiasi piano di comunicazione.",
     approach:
-      'Ho mappato 8 competitor diretti e indiretti analizzando posizionamento, tono di voce, canali attivi, frequenza di pubblicazione e tipologia di contenuti con maggiore engagement. Il lavoro si è concluso con un report operativo con 3 aree di opportunità immediatamente attivabili.',
+      "Ho progettato un framework di domande aperte su 8 aree chiave — missione, visione, valori, proposta di valore, pubblico, tono di voce, posizionamento e ambizioni strategiche — e l'ho applicato in un workshop di branding, trasformando le risposte in una piattaforma di brand completa e in una mappa mentale consultabile.",
     results: [
-      { label: 'Competitor analizzati', value: '8' },
-      { label: 'Opportunità individuate', value: '12' },
-      { label: 'Tempo di consegna', value: '10 giorni lavorativi' },
+      { label: 'Aree esplorate', value: '8' },
+      { label: 'Formato', value: 'Mappa mentale interattiva' },
+      { label: 'Utilizzo', value: 'Da solo o in team' },
     ],
-    categorySlug: 'analisi-competitor',
+    categorySlug: 'analisi-societa',
     mediaType: 'analisi',
-    client: 'Brand moda sostenibile',
-    sector: 'Fashion & Sostenibilità',
-    tools: ['Similarweb', 'Meta Ad Library', 'Fogli di calcolo condivisi'],
-    coverImage: '/images/portfolio/analisi-competitor-brand-abbigliamento-sostenibile-1.svg',
-    gallery: [
-      '/images/portfolio/analisi-competitor-brand-abbigliamento-sostenibile-1.svg',
-      '/images/portfolio/analisi-competitor-brand-abbigliamento-sostenibile-2.svg',
-    ],
-    tags: ['analisi competitor', 'strategia', 'moda'],
+    client: 'NaturaSì Bistrot / Vegan&More',
+    sector: 'Ristorazione biologica',
+    tools: ['Framework proprietario', 'Workshop guidato', 'Claude'],
+    coverImage: '/images/portfolio/bussola-del-brand-mappa.svg',
+    gallery: ['/images/portfolio/bussola-del-brand-mappa.svg'],
+    tags: ['branding', 'strategia', 'workshop'],
     date: '2026-02-18',
     duration: '10 giorni',
   },
@@ -231,7 +229,7 @@ export const portfolioItems: PortfolioItem[] = [
 ];
 
 /** Slug dei progetti che hanno una pagina dedicata in src/app/portfolio/<slug> invece del template [slug]. */
-export const customPageSlugs: string[] = ['borsa-3in1'];
+export const customPageSlugs: string[] = ['borsa-3in1', 'analisi-competitor-brand-abbigliamento-sostenibile'];
 
 export function getPortfolioItemBySlug(slug: string): PortfolioItem | undefined {
   return portfolioItems.find((item) => item.slug === slug);

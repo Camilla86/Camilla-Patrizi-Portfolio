@@ -6,7 +6,11 @@ import type { PortfolioItem } from '@/types';
 import { mediaTypeLabel } from '@/lib/utils';
 
 // Slug dei progetti la cui copertina va mostrata intera (senza ritaglio), perché contiene testo/dettagli importanti.
-const SHOW_FULL_IMAGE_SLUGS = ['serie-reel-lancio-aurora-skincare', 'workflow-ai-produzione-contenuti-editoriali'];
+const SHOW_FULL_IMAGE_SLUGS = [
+  'serie-reel-lancio-aurora-skincare',
+  'workflow-ai-produzione-contenuti-editoriali',
+  'analisi-competitor-brand-abbigliamento-sostenibile',
+];
 
 interface PortfolioCardProps {
   item: PortfolioItem;
