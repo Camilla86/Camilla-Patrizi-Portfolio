@@ -35,6 +35,8 @@ export interface PortfolioItem {
   videoUrl?: string;
   /** Pagina online del progetto (es. una landing statica in /public), mostrata come link nel case study. */
   liveUrl?: string;
+  /** Se presente, la card del portfolio porta direttamente qui invece che alla pagina di dettaglio del case study. */
+  linkHref?: string;
   tags: string[];
   date: string; // ISO 8601
   duration: string;

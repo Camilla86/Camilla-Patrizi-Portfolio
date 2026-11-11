@@ -40,7 +40,7 @@ export function FeaturedPortfolio() {
         <BentoGrid className="mt-10">
           {items.map(({ item, size }) => (
             <BentoItem key={item.slug} size={size}>
-              <Link href={`/portfolio/${item.slug}`} className="absolute inset-0">
+              <Link href={item.linkHref ?? `/portfolio/${item.slug}`} className="absolute inset-0">
                 <Image
                   src={item.coverImage}
                   alt={item.title}

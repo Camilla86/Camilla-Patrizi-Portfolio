@@ -17,7 +17,7 @@ interface PortfolioCardProps {
 export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
   return (
     <Link
-      href={`/portfolio/${item.slug}`}
+      href={item.linkHref ?? `/portfolio/${item.slug}`}
       className="group block overflow-hidden rounded-3xl border border-stroke bg-surface transition-colors hover:border-text-primary/30"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
