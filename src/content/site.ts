@@ -22,6 +22,7 @@ export const mainNav: NavItem[] = [
   { label: 'Chi sono', href: '/chi-sono' },
   { label: 'Competenze', href: '/servizi' },
   { label: 'Portfolio', href: '/portfolio' },
+  { label: 'La Mia Agenda', href: '/agenda' },
   { label: 'Contatti', href: '/contatti' },
 ];
 
