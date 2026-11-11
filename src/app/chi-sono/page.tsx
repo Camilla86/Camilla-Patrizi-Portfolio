@@ -46,8 +46,8 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
               Ogni progetto, che sia un video, una landing page o un&apos;analisi competitor, nasce dalla stessa
-              domanda: qual è il risultato concreto che vogliamo ottenere? Da lì costruisco un piano chiaro,
-              misurabile e realizzabile nei tempi previsti.
+              domanda: qual è il problema che voglio risolvere e il risultato concreto che vogliamo ottenere? Da lì
+              costruisco un piano chiaro, misurabile e realizzabile nei tempi previsti.
             </p>
             <div className="mt-8">
               <Button href="/portfolio" variant="secondary">
