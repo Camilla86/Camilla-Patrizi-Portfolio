@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Image from 'next/image';
 
 // Prototipo dimostrativo "La Mia Agenda": dati solo in memoria, si azzerano al ricaricamento.
 // Palette dedicata (blu navy + bianco/crema), diversa dal tema scuro del resto del sito.
@@ -154,9 +155,16 @@ export function AgendaApp() {
 
   return (
     <div className="min-h-screen bg-[#F6F3EC]">
-      {/* Intestazione: in attesa della foto reale da caricare in public/images/agenda/ */}
       <div className="relative overflow-hidden border-b border-[#D8D2C2] bg-[#1E2A44]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
+        <Image
+          src="/images/agenda/reception-ufficio.jpg"
+          alt="Reception di un ufficio moderno"
+          fill
+          priority
+          className="object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E2A44] via-[#1E2A44]/95 to-[#1E2A44]/70" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/60">Prototipo demo</p>
             <h1 className="mt-3 font-display text-4xl italic tracking-tight text-white sm:text-5xl">

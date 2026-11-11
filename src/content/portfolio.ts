@@ -167,11 +167,8 @@ export const portfolioItems: PortfolioItem[] = [
     client: 'Uffici e studi professionali',
     sector: 'Gestionale & Produttività',
     tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    coverImage: '/images/portfolio/analisi-digitale-studio-professionale-1.svg',
-    gallery: [
-      '/images/portfolio/analisi-digitale-studio-professionale-1.svg',
-      '/images/portfolio/analisi-digitale-studio-professionale-2.svg',
-    ],
+    coverImage: '/images/agenda/reception-ufficio.jpg',
+    gallery: ['/images/agenda/reception-ufficio.jpg'],
     linkHref: '/agenda',
     tags: ['app', 'gestionale', 'prototipo'],
     date: '2026-01-15',
