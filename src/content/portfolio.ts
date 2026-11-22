@@ -246,7 +246,7 @@ export const portfolioItems: PortfolioItem[] = [
     tools: ['Google AI Studio'],
     coverImage: '/images/portfolio/esempio-siti-internet-studiogest-screenshot.png',
     gallery: ['/images/portfolio/esempio-siti-internet-studiogest-screenshot.png'],
-    linkHref: 'https://studiogest-gestione-ufficio-e-portale-clienti.ai.studio/',
+    linkHref: 'https://aistudio.google.com/apps/9d9f26ef-7c65-4612-a4e2-27043df0c3b3?showPreview=true&showAssistant=true',
     tags: ['prototipo', 'ai studio', 'sito web'],
     date: '2026-11-22',
     duration: 'Prototipo',
