@@ -226,6 +226,31 @@ export const portfolioItems: PortfolioItem[] = [
     date: '2026-06-01',
     duration: '2 settimane',
   },
+  {
+    slug: 'esempio-siti-internet-studiogest',
+    title: 'Esempio siti internet',
+    excerpt: 'Prototipo di sito/app per la gestione di un ufficio e un portale clienti, realizzato con Google AI Studio.',
+    challenge:
+      "Esplorare quanto velocemente si possa prototipare un sito o una mini app funzionante descrivendo l'idea a parole, senza partire da zero con il codice.",
+    approach:
+      "Ho progettato la struttura e i contenuti dell'app (gestione ufficio e portale clienti) e l'ho realizzata con Google AI Studio, pubblicandola online come esempio consultabile.",
+    results: [
+      { label: 'Strumento', value: 'Google AI Studio' },
+      { label: 'Tipo', value: 'Prototipo online' },
+      { label: 'Stato', value: 'Esempio pubblicato' },
+    ],
+    categorySlug: 'mini-app-tool',
+    mediaType: 'app',
+    client: 'Progetto personale',
+    sector: 'Gestionale & Produttività',
+    tools: ['Google AI Studio'],
+    coverImage: '/images/portfolio/esempio-siti-internet-studiogest-1.svg',
+    gallery: ['/images/portfolio/esempio-siti-internet-studiogest-1.svg'],
+    linkHref: 'https://studiogest-gestione-ufficio-e-portale-clienti.ai.studio/',
+    tags: ['prototipo', 'ai studio', 'sito web'],
+    date: '2026-11-22',
+    duration: 'Prototipo',
+  },
 ];
 
 /** Slug dei progetti che hanno una pagina dedicata in src/app/portfolio/<slug> invece del template [slug]. */

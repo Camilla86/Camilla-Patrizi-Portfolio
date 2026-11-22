@@ -19,11 +19,10 @@ interface PortfolioCardProps {
 
 /** Card di un case study, usata nel catalogo, nelle categorie e nei progetti correlati. */
 export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
-  return (
-    <Link
-      href={item.linkHref ?? `/portfolio/${item.slug}`}
-      className="group block overflow-hidden rounded-3xl border border-stroke bg-surface transition-colors hover:border-text-primary/30"
-    >
+  const isExternal = item.linkHref?.startsWith('http');
+
+  const content = (
+    <>
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={item.coverImage}
@@ -50,6 +49,22 @@ export function PortfolioCard({ item, priority = false }: PortfolioCardProps) {
         )}
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{item.excerpt}</p>
       </div>
+    </>
+  );
+
+  const className = 'group block overflow-hidden rounded-3xl border border-stroke bg-surface transition-colors hover:border-text-primary/30';
+
+  if (isExternal) {
+    return (
+      <a href={item.linkHref} target="_blank" rel="noopener noreferrer" className={className}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={item.linkHref ?? `/portfolio/${item.slug}`} className={className}>
+      {content}
     </Link>
   );
 }
