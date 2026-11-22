@@ -10,6 +10,7 @@ const SHOW_FULL_IMAGE_SLUGS = [
   'serie-reel-lancio-aurora-skincare',
   'workflow-ai-produzione-contenuti-editoriali',
   'analisi-competitor-brand-abbigliamento-sostenibile',
+  'esempio-siti-internet-studiogest',
 ];
 
 interface PortfolioCardProps {

@@ -18,7 +18,11 @@ import { buildMetadata, breadcrumbJsonLd, portfolioItemJsonLd } from '@/lib/seo'
 import { formatDate, mediaTypeLabel } from '@/lib/utils';
 
 // Slug dei progetti le cui immagini vanno mostrate intere (senza ritaglio), perché contengono testo/dettagli importanti.
-const SHOW_FULL_IMAGE_SLUGS = ['serie-reel-lancio-aurora-skincare', 'workflow-ai-produzione-contenuti-editoriali'];
+const SHOW_FULL_IMAGE_SLUGS = [
+  'serie-reel-lancio-aurora-skincare',
+  'workflow-ai-produzione-contenuti-editoriali',
+  'esempio-siti-internet-studiogest',
+];
 
 export function generateStaticParams() {
   // I progetti con pagina dedicata (es. src/app/portfolio/borsa-3in1) non usano questo template.

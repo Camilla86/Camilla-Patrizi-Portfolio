@@ -229,11 +229,11 @@ export const portfolioItems: PortfolioItem[] = [
   {
     slug: 'esempio-siti-internet-studiogest',
     title: 'Esempio siti internet',
-    excerpt: 'Prototipo di sito/app per la gestione di un ufficio e un portale clienti, realizzato con Google AI Studio.',
+    excerpt: "Portale clienti per uno studio professionale: prenotazione appuntamenti, promemoria, messaggi e documenti, realizzato con Google AI Studio.",
     challenge:
-      "Esplorare quanto velocemente si possa prototipare un sito o una mini app funzionante descrivendo l'idea a parole, senza partire da zero con il codice.",
+      "Uno studio professionale (fiscale e notarile) voleva un'area riservata dove i propri assistiti potessero prenotare un appuntamento in autonomia, ricevere promemoria e scrivere alla segreteria, senza passare sempre dal telefono.",
     approach:
-      "Ho progettato la struttura e i contenuti dell'app (gestione ufficio e portale clienti) e l'ho realizzata con Google AI Studio, pubblicandola online come esempio consultabile.",
+      "Ho progettato un'area riservata con prenotazione guidata per servizio (consulenza fiscale, atti notarili), promemoria dell'appuntamento imminente con esportazione nel calendario, messaggi diretti con lo studio e sezione documenti, realizzata con Google AI Studio.",
     results: [
       { label: 'Strumento', value: 'Google AI Studio' },
       { label: 'Tipo', value: 'Prototipo online' },
@@ -241,11 +241,11 @@ export const portfolioItems: PortfolioItem[] = [
     ],
     categorySlug: 'mini-app-tool',
     mediaType: 'app',
-    client: 'Progetto personale',
-    sector: 'Gestionale & Produttività',
+    client: 'Studio professionale (fiscale e notarile)',
+    sector: 'Servizi professionali',
     tools: ['Google AI Studio'],
-    coverImage: '/images/portfolio/esempio-siti-internet-studiogest-1.svg',
-    gallery: ['/images/portfolio/esempio-siti-internet-studiogest-1.svg'],
+    coverImage: '/images/portfolio/esempio-siti-internet-studiogest-screenshot.png',
+    gallery: ['/images/portfolio/esempio-siti-internet-studiogest-screenshot.png'],
     linkHref: 'https://studiogest-gestione-ufficio-e-portale-clienti.ai.studio/',
     tags: ['prototipo', 'ai studio', 'sito web'],
     date: '2026-11-22',
